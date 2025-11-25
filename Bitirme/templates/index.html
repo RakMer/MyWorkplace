@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackerNews Spark Analizi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>📊 HackerNews Spark Analizi</h1>
+            <p>MongoDB ve Spark ile Veri Analizi</p>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- İstatistikler -->
+        <section class="stats-section">
+            <h2>📈 İstatistikler</h2>
+            <div class="stats-grid">
+                <div class="stat-card loading">
+                    <h3>Toplam Makale</h3>
+                    <p class="stat-value" id="total-articles">-</p>
+                </div>
+                <div class="stat-card loading">
+                    <h3>Yazarlı Makale</h3>
+                    <p class="stat-value" id="with-author">-</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Makaleleri -->
+        <section class="data-section">
+            <h2>🤖 AI ile İlgili Makaleler</h2>
+            <div id="ai-articles" class="data-grid loading">
+                <p>Yükleniyor...</p>
+            </div>
+        </section>
+
+        <!-- En Çok Yorumlanan Hikayeler -->
+        <section class="data-section">
+            <h2>💬 En Çok Yorumlanan Hikayeler</h2>
+            <div id="top-stories" class="data-grid loading">
+                <p>Yükleniyor...</p>
+            </div>
+        </section>
+
+        <!-- En Çok Yazar -->
+        <section class="data-section">
+            <h2>✍️ En Çok Makale Yazan Yazarlar</h2>
+            <div id="top-authors" class="data-grid loading">
+                <p>Yükleniyor...</p>
+            </div>
+        </section>
+
+        <!-- En Yüksek Puan Alan Makaleler -->
+        <section class="data-section">
+            <h2>⭐ En Yüksek Puan Alan Makaleler</h2>
+            <div id="top-articles" class="data-grid loading">
+                <p>Yükleniyor...</p>
+            </div>
+        </section>
+
+        <!-- Loading Indicator -->
+        <div id="loading-spinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+            <p>Veriler yükleniyor...</p>
+        </div>
+
+        <!-- Error Messages -->
+        <div id="error-message" class="error-message hidden"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 HackerNews Spark Analizi | MongoDB ve PySpark ile yapılmıştır</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
