@@ -1,4 +1,5 @@
 """Spark sorguları için helper modül"""
+from pymongo import MongoClient
 from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 import time
@@ -8,8 +9,6 @@ def get_spark_session():
     return (
         SparkSession.builder
         .appName("MongoSparkTest")
-        .config("spark.jars.packages", "org.mongodb.spark:mongo-spark-connector_2.13:10.3.0")
-        .config("spark.mongodb.read.connection.uri", "mongodb://localhost:27017/HackerNewsDB")
         .config("spark.driver.memory", "4g")
         .config("spark.executor.memory", "2g")
         .config("spark.sql.adaptive.enabled", "true")
@@ -19,15 +18,50 @@ def get_spark_session():
 
 def get_dataframe(spark):
     """MongoDB'den veri çek ve DataFrame oluştur"""
-    df = (
-        spark.read.format("mongodb")
-        .option("database", "HackerNewsDB")
-        .option("collection", "HackerNews")
-        .load()
-        .select("title", "author", "story_id", "points")
-    )
-    spark.sparkContext.setLogLevel("ERROR")
-    return df
+    try:
+        # MongoDB'ye bağlan
+        client = MongoClient("mongodb://localhost:27017/")
+        db = client["HackerNewsDB"]
+        collection = db["HackerNews"]
+        
+        # Verileri al — `_id` alanını hariç tut ve gelen dökümanları sanitize et
+        cursor = collection.find({}, {"_id": 0, "title": 1, "author": 1, "story_id": 1, "points": 1})
+        raw_data = list(cursor)
+
+        if not raw_data:
+            print("Uyarı: MongoDB'den veri alınamadı. Boş bir DataFrame döndürülüyor.")
+            return spark.createDataFrame([], "title STRING, author STRING, story_id STRING, points INT")
+
+        # Mongo dökümanlarını Spark uyumlu basit dict'lere dönüştür
+        data = []
+        for doc in raw_data:
+            title = doc.get("title")
+            author = doc.get("author")
+            # story_id bazen ObjectId veya int olabilir, stringify etmek güvenli
+            story_id = doc.get("story_id")
+            if story_id is not None:
+                try:
+                    story_id = str(story_id)
+                except Exception:
+                    story_id = None
+
+            points = doc.get("points")
+            if points is not None:
+                try:
+                    points = int(points)
+                except Exception:
+                    points = None
+
+            data.append({"title": title, "author": author, "story_id": story_id, "points": points})
+
+        # DataFrame oluştur
+        df = spark.createDataFrame(data)
+        spark.sparkContext.setLogLevel("ERROR")
+        return df
+    except Exception as e:
+        print(f"MongoDB bağlantı hatası: {e}")
+        print("Boş DataFrame döndürülüyor...")
+        return spark.createDataFrame([], "title STRING, author STRING, story_id STRING, points INT")
 
 def query_ai_articles(df, limit=50):
     """AI başlıklı makaleleri bul"""

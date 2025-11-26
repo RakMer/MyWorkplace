@@ -1,4 +1,3 @@
-"""Flask web arayüzü - HackerNews Spark Sorgular"""
 from flask import Flask, render_template, jsonify, request
 import json
 import logging
