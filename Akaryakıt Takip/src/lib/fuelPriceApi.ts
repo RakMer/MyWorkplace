@@ -37,39 +37,72 @@ const brandMapping: Record<string, string> = {
 };
 
 async function fetchFromCollectAPI(): Promise<FuelCompanyPrices | null> {
-  try {
-    // API URL - district ve city parametreleri değiştirilebilir
-    const url = new URL(
-      "https://api.collectapi.com/gasPrice/turkeyGasoline"
-    );
-    url.searchParams.set("district", "kadikoy");
-    url.searchParams.set("city", "istanbul");
-
-    const response = await fetch(url.toString(), {
-      method: "GET",
-      headers: {
-        authorization: "apikey 3iftQFgLJ3P1SyEPt0rFkD:0zJnn86MpIcG66jhNitUI0",
-        "content-type": "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      console.error(`CollectAPI returned status ${response.status}`);
-      return null;
-    }
-
-    const data: CollectAPIResponse = await response.json();
-
-    if (!data.success || !data.result) {
-      console.error("CollectAPI returned unsuccessful response");
-      return null;
-    }
-
-    return parseCollectAPIResponse(data);
-  } catch (error) {
-    console.error("Error fetching from CollectAPI:", error);
+  // Read API key from environment variables for safety
+  const key = process.env.COLLECTAPI_KEY || process.env.NEXT_PUBLIC_COLLECTAPI_KEY;
+  if (!key) {
+    console.error("CollectAPI key not set in environment (COLLECTAPI_KEY or NEXT_PUBLIC_COLLECTAPI_KEY)");
     return null;
   }
+
+  // build URL
+  const url = new URL("https://api.collectapi.com/gasPrice/turkeyGasoline");
+  url.searchParams.set("district", "kadikoy");
+  url.searchParams.set("city", "istanbul");
+
+  // simple retry with backoff
+  const maxRetries = 3;
+  const baseDelayMs = 500;
+
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      const response = await fetch(url.toString(), {
+        method: "GET",
+        headers: {
+          authorization: `apikey ${key}`,
+          "content-type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        // try to read body for more info
+        let bodyText = "";
+        try {
+          bodyText = await response.text();
+        } catch (e) {
+          bodyText = `<unable to read body: ${e}>`;
+        }
+        console.error(`CollectAPI returned status ${response.status}: ${bodyText}`);
+
+        // if 5xx, retry
+        if (response.status >= 500 && attempt < maxRetries) {
+          const delay = baseDelayMs * attempt;
+          console.log(`Retrying CollectAPI in ${delay}ms (attempt ${attempt + 1}/${maxRetries})`);
+          await new Promise((r) => setTimeout(r, delay));
+          continue;
+        }
+
+        return null;
+      }
+
+      const data: CollectAPIResponse = await response.json();
+      if (!data.success || !data.result) {
+        console.error("CollectAPI returned unsuccessful response or empty result");
+        return null;
+      }
+
+      return parseCollectAPIResponse(data);
+    } catch (error) {
+      console.error(`Error fetching from CollectAPI (attempt ${attempt}):`, error);
+      if (attempt < maxRetries) {
+        const delay = baseDelayMs * attempt;
+        await new Promise((r) => setTimeout(r, delay));
+        continue;
+      }
+      return null;
+    }
+  }
+
+  return null;
 }
 
 function parseCollectAPIResponse(data: CollectAPIResponse): FuelCompanyPrices {
