@@ -1,0 +1,73 @@
+{
+    "son_guncelleme": "29.11.2025 20:46",
+    "kaynak": "Shell",
+    "url": "https://www.turkiyeshell.com/pompatest/",
+    "veriler": [
+        {
+            "sehir": "ADIYAMAN",
+            "ilce": "MERKEZ",
+            "benzin": 56.45,
+            "motorin": 57.31
+        },
+        {
+            "sehir": "ADIYAMAN",
+            "ilce": "GOLBASI",
+            "benzin": 56.45,
+            "motorin": 57.31
+        },
+        {
+            "sehir": "ADIYAMAN",
+            "ilce": "KAHTA",
+            "benzin": 56.45,
+            "motorin": 57.31
+        },
+        {
+            "sehir": "AFYON",
+            "ilce": "MERKEZ",
+            "benzin": 56.38,
+            "motorin": 57.31
+        },
+        {
+            "sehir": "AFYON",
+            "ilce": "BOLVADIN",
+            "benzin": 56.38,
+            "motorin": 57.31
+        },
+        {
+            "sehir": "AFYON",
+            "ilce": "CAY",
+            "benzin": 56.38,
+            "motorin": 57.31
+        },
+        {
+            "sehir": "AFYON",
+            "ilce": "DINAR",
+            "benzin": 56.38,
+            "motorin": 57.31
+        },
+        {
+            "sehir": "AFYON",
+            "ilce": "EMIRDAG",
+            "benzin": 56.38,
+            "motorin": 57.31
+        },
+        {
+            "sehir": "AFYON",
+            "ilce": "ISCEHISAR",
+            "benzin": 56.38,
+            "motorin": 57.31
+        },
+        {
+            "sehir": "AFYON",
+            "ilce": "SANDIKLI",
+            "benzin": 56.38,
+            "motorin": 57.31
+        },
+        {
+            "sehir": "AFYON",
+            "ilce": "SINANPASA",
+            "benzin": 56.38,
+            "motorin": 57.31
+        }
+    ]
+}
