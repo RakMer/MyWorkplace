@@ -1,8 +1,68 @@
 {
-    "son_guncelleme": "29.11.2025 20:46",
+    "son_guncelleme": "30.11.2025 17:26",
     "kaynak": "Shell",
     "url": "https://www.turkiyeshell.com/pompatest/",
     "veriler": [
+        {
+            "sehir": "ADANA",
+            "ilce": "MERKEZ",
+            "benzin": 56.13,
+            "motorin": 56.96
+        },
+        {
+            "sehir": "ADANA",
+            "ilce": "ALADAG",
+            "benzin": 56.13,
+            "motorin": 56.96
+        },
+        {
+            "sehir": "ADANA",
+            "ilce": "CEYHAN",
+            "benzin": 56.13,
+            "motorin": 56.96
+        },
+        {
+            "sehir": "ADANA",
+            "ilce": "IMAMOGLU",
+            "benzin": 56.13,
+            "motorin": 56.96
+        },
+        {
+            "sehir": "ADANA",
+            "ilce": "KARATAS",
+            "benzin": 56.13,
+            "motorin": 56.96
+        },
+        {
+            "sehir": "ADANA",
+            "ilce": "KOZAN",
+            "benzin": 56.13,
+            "motorin": 56.96
+        },
+        {
+            "sehir": "ADANA",
+            "ilce": "POZANTI",
+            "benzin": 56.13,
+            "motorin": 56.96
+        },
+        {
+            "sehir": "ADANA",
+            "ilce": "SARICAM",
+            "benzin": 56.13,
+            "motorin": 56.96
+        },
+        {
+            "sehir": "ADANA",
+            "ilce": "SEYHAN",
+            "benzin": 56.13,
+            "motorin": 56.96
+        },
+        {
+            "sehir": "ADANA",
+            "ilce": "YUREGIR",
+            "benzin": 56.13,
+            "motorin": 56.96
+        },
         {
             "sehir": "ADIYAMAN",
             "ilce": "MERKEZ",
@@ -68,6 +128,12 @@
             "ilce": "SINANPASA",
             "benzin": 56.38,
             "motorin": 57.31
+        },
+        {
+            "sehir": "AGRI",
+            "ilce": "MERKEZ",
+            "benzin": 56.63,
+            "motorin": 57.45
         }
     ]
 }

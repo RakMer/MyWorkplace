@@ -58,7 +58,7 @@ try:
 
             # A. SAYFAYI YENİLE (Garanti temizlik)
             # Adana bittikten sonra sayfa durumu bozuluyor, o yüzden her seferinde taze sayfa açıyoruz.
-            if i > 0: # İlk şehirde zaten açığız, sonrakilerde yenile
+            if i >= 0: # İlk şehirde zaten açığız, sonrakilerde yenile
                 driver.get(URL)
                 time.sleep(1) # Sayfanın oturmasını bekle
 
