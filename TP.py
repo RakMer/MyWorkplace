@@ -11,16 +11,19 @@ from datetime import datetime
 
 url = "https://www.tppd.com.tr/akaryakit-fiyatlari"
 driver = webdriver.Safari()
+DOSYA_ADI= "tp_fiatlari.json"
 
 
 driver.maximize_window()
 wait = WebDriverWait(driver, 20)
 actions = ActionChains(driver)
+tum_veriler= []
 
 try:
     driver.get(url)
     time.sleep(2)
     sehirler= []
+    sehir_count = 0
     
     soup = BeautifulSoup(driver.page_source, "html.parser")
     liste_items = soup.find_all("path")
@@ -33,9 +36,10 @@ try:
 
     for sehir in sehirler:
         try:
-           
-            driver.get(url)
-            time.sleep(2) # Sayfanın oturmasını bekle
+            sehir_count+=1
+            print(sehir_count, " Tane şehir eklendi")
+            kayit_sayisi = 0
+          
 
             # Önce element'in tıklanabilir olmasını bekle
             sehir_el = wait.until(EC.element_to_be_clickable((By.ID, f"citylink{sehir}")))
@@ -45,10 +49,13 @@ try:
             # veya direkt click:
             # sehir_el.click()
             
-            time.sleep(5)
+            time.sleep(2)
             print(f"✅ {sehir} tıklandı")
 
-            table = soup.find("section",id="results")
+            soup=BeautifulSoup(driver.page_source,"html.parser")
+            table = soup.find("section", id="results")
+            
+            
             if table:
                 satirlar = table.find_all("tr")
                 for row in satirlar:
@@ -57,13 +64,38 @@ try:
                         ilce = cols[0].text.strip()
                         benzin = cols[1].text.strip().replace(',', '.')
                         motorin = cols[3].text.strip().replace(',', '.')
-                        print(ilce,benzin,motorin)
-            
+                        
+
+                        if (any(c.isdigit() for c in benzin) and sehir.upper() == ilce) or ilce == "ISTANBUL - ANADOLU" or ilce == "AFYON" or ilce == "K.MARAS":
+                            tum_veriler.append({
+                                "sehir": sehir.upper(),
+                                "ilce": ilce,
+                                "benzin": float(benzin),
+                                "motorin": float(motorin)
+                            })
+                            kayit_sayisi += 1
+                print(f"✅ {kayit_sayisi} ilçe alındı.")
+            else:
+                print(" ⚠️ Tablo yok.")
 
             
         except Exception as e:
             print(f"❌ {sehir} için hata: {e}")
             continue  # bir sonraki şehre geç
+
+    print("-" * 50)
+    final_veri = {
+        "son_guncelleme": datetime.now().strftime("%d.%m.%Y %H:%M"),
+        "kaynak": "Shell",
+        "url": url,
+        "veriler": tum_veriler
+    }
+    
+    with open(DOSYA_ADI, "w", encoding="utf-8") as f:
+        json.dump(final_veri, f, ensure_ascii=False, indent=4)
+        
+    print(f"💾 İŞLEM TAMAMLANDI! {len(tum_veriler)} kayıt kaydedildi.")
+
 
 except Exception as e:
     print(f"❌ Kritik Hata: {e}")
