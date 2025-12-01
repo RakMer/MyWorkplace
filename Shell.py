@@ -86,7 +86,7 @@ try:
                 time.sleep(1) # Manuel bekleme
 
             # E. Veriyi Çek
-            soup = BeautifulSoup(driver.page_source, "html.parser")
+            #soup = BeautifulSoup(driver.page_source, "html.parser")
             tablo = soup.find("table", id="cb_all_grdPrices_DXMainTable")
             
             if tablo:
