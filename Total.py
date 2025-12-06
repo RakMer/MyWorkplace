@@ -17,19 +17,19 @@ headers = {
 # Şehir Adları Sözlüğü (Plakadan Şehre)
 # API şehir adını vermediği için manuel ekleyelim, daha şık görünür.
 SEHIRLER = {
-    1: "ADANA", 2: "ADIYAMAN", 3: "AFYONKARAHİSAR", 4: "AĞRI", 5: "AMASYA", 6: "ANKARA", 7: "ANTALYA", 8: "ARTVİN", 9: "AYDIN", 10: "BALIKESİR",
-    11: "BİLECİK", 12: "BİNGÖL", 13: "BİTLİS", 14: "BOLU", 15: "BURDUR", 16: "BURSA", 17: "ÇANAKKALE", 18: "ÇANKIRI", 19: "ÇORUM", 20: "DENİZLİ",
-    21: "DİYARBAKIR", 22: "EDİRNE", 23: "ELAZIĞ", 24: "ERZİNCAN", 25: "ERZURUM", 26: "ESKİŞEHİR", 27: "GAZİANTEP", 28: "GİRESUN", 29: "GÜMÜŞHANE", 30: "HAKKARİ",
-    31: "HATAY", 32: "ISPARTA", 33: "MERSİN", 34: "İSTANBUL", 35: "İZMİR", 36: "KARS", 37: "KASTAMONU", 38: "KAYSERİ", 39: "KIRKLARELİ", 40: "KIRŞEHİR",
-    41: "KOCAELİ", 42: "KONYA", 43: "KÜTAHYA", 44: "MALATYA", 45: "MANİSA", 46: "KAHRAMANMARAŞ", 47: "MARDİN", 48: "MUĞLA", 49: "MUŞ", 50: "NEVŞEHİR",
-    51: "NİĞDE", 52: "ORDU", 53: "RİZE", 54: "SAKARYA", 55: "SAMSUN", 56: "SİİRT", 57: "SİNOP", 58: "SİVAS", 59: "TEKİRDAĞ", 60: "TOKAT",
-    61: "TRABZON", 62: "TUNCELİ", 63: "ŞANLIURFA", 64: "UŞAK", 65: "VAN", 66: "YOZGAT", 67: "ZONGULDAK", 68: "AKSARAY", 69: "BAYBURT", 70: "KARAMAN",
-    71: "KIRIKKALE", 72: "BATMAN", 73: "ŞIRNAK", 74: "BARTIN", 75: "ARDAHAN", 76: "IĞDIR", 77: "YALOVA", 78: "KARABÜK", 79: "KİLİS", 80: "OSMANİYE", 81: "DÜZCE"
+    1: "ADANA", 2: "ADIYAMAN", 3: "AFYONKARAHİSAR", 4: "AĞRI", 6: "AMASYA", 7: "ANKARA", 8: "ANTALYA", 66: "ARTVİN", 9: "AYDIN", 10: "BALIKESİR",
+    13: "BİLECİK", 67: "BİNGÖL", 68: "BİTLİS", 14: "BOLU", 15: "BURDUR", 16: "BURSA", 17: "ÇANAKKALE", 18: "ÇANKIRI", 19: "ÇORUM", 20: "DENİZLİ",
+    21: "DİYARBAKIR", 23: "EDİRNE", 69: "ELAZIĞ", 24: "ERZİNCAN", 25: "ERZURUM", 26: "ESKİŞEHİR", 27: "GAZİANTEP", 28: "GİRESUN", 70: "GÜMÜŞHANE", 71: "HAKKARİ",
+    29: "HATAY", 31: "ISPARTA", 47: "MERSİN", 32: "İSTANBUL", 33: "İZMİR", 72: "KARS", 37: "KASTAMONU", 38: "KAYSERİ", 40: "KIRKLARELİ", 41: "KIRŞEHİR",
+    42: "KOCAELİ", 43: "KONYA", 44: "KÜTAHYA", 45: "MALATYA", 46: "MANİSA", 34: "KAHRAMANMARAŞ", 73: "MARDİN", 48: "MUĞLA", 74: "MUŞ", 49: "NEVŞEHİR",
+    50: "NİĞDE", 51: "ORDU", 53: "RİZE", 54: "SAKARYA", 55: "SAMSUN", 78: "SİİRT", 57: "SİNOP", 56: "SİVAS", 59: "TEKİRDAĞ", 60: "TOKAT",
+    61: "TRABZON", 79: "TUNCELİ", 58: "ŞANLIURFA", 62: "UŞAK", 80: "VAN", 64: "YOZGAT", 65: "ZONGULDAK", 5: "AKSARAY", 81: "BAYBURT", 36: "KARAMAN",
+    39: "KIRIKKALE", 12: "BATMAN", 82: "ŞIRNAK", 11: "BARTIN", 84: "ARDAHAN", 30: "IĞDIR", 63: "YALOVA", 35: "KARABÜK", 86: "KİLİS", 52: "OSMANİYE", 22: "DÜZCE"
 }
 
 print(f"📋 Toplam 81 il taranacak...\n")
 
-for plaka in range(1, 82):
+for plaka in range(1, 87):
     try:
         url = f"{BASE_URL}/{plaka}"
         response = requests.get(url, headers=headers, timeout=10)
@@ -52,7 +52,7 @@ for plaka in range(1, 82):
                     if benzin is None: benzin = 0.0
                     if motorin is None: motorin = 0.0
                     
-                    if ilce and ilce == "MERKEZ":
+                    if ilce and( ilce == "MERKEZ" or ilce == "MERKEZ-ANADOLU"):
                         tum_veriler.append({
                             "plaka": plaka,
                             "sehir": sehir_adi,

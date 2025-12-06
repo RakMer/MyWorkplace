@@ -1,545 +1,573 @@
 {
-    "son_guncelleme": "02.12.2025 01:28",
+    "son_guncelleme": "06.12.2025 22:03",
     "kaynak": "TotalEnergies",
     "veriler": [
         {
             "plaka": 1,
             "sehir": "ADANA",
             "ilce": "MERKEZ",
-            "benzin": 56.06,
-            "motorin": 56.93
+            "benzin": 56.15,
+            "motorin": 56.98
         },
         {
             "plaka": 2,
             "sehir": "ADIYAMAN",
             "ilce": "MERKEZ",
-            "benzin": 56.4,
-            "motorin": 57.3
+            "benzin": 56.49,
+            "motorin": 57.35
         },
         {
             "plaka": 3,
             "sehir": "AFYONKARAHİSAR",
             "ilce": "MERKEZ",
-            "benzin": 56.28,
-            "motorin": 57.27
+            "benzin": 56.37,
+            "motorin": 57.32
         },
         {
             "plaka": 4,
             "sehir": "AĞRI",
             "ilce": "MERKEZ",
-            "benzin": 56.55,
-            "motorin": 57.43
+            "benzin": 56.64,
+            "motorin": 57.48
         },
         {
             "plaka": 5,
-            "sehir": "AMASYA",
+            "sehir": "AKSARAY",
             "ilce": "MERKEZ",
-            "benzin": 56.13,
-            "motorin": 57.0
+            "benzin": 56.22,
+            "motorin": 57.05
         },
         {
             "plaka": 6,
-            "sehir": "ANKARA",
+            "sehir": "AMASYA",
             "ilce": "MERKEZ",
-            "benzin": 55.82,
-            "motorin": 56.68
+            "benzin": 55.91,
+            "motorin": 56.73
         },
         {
             "plaka": 7,
-            "sehir": "ANTALYA",
+            "sehir": "ANKARA",
             "ilce": "MERKEZ",
-            "benzin": 55.17,
-            "motorin": 56.04
+            "benzin": 55.26,
+            "motorin": 56.09
         },
         {
             "plaka": 8,
-            "sehir": "ARTVİN",
+            "sehir": "ANTALYA",
             "ilce": "MERKEZ",
-            "benzin": 56.44,
-            "motorin": 57.4
+            "benzin": 56.53,
+            "motorin": 57.44
         },
         {
             "plaka": 9,
             "sehir": "AYDIN",
             "ilce": "MERKEZ",
-            "benzin": 55.72,
-            "motorin": 56.59
+            "benzin": 55.81,
+            "motorin": 56.64
         },
         {
             "plaka": 10,
             "sehir": "BALIKESİR",
             "ilce": "MERKEZ",
-            "benzin": 55.82,
-            "motorin": 56.7
+            "benzin": 55.91,
+            "motorin": 56.75
         },
         {
             "plaka": 11,
-            "sehir": "BİLECİK",
+            "sehir": "BARTIN",
             "ilce": "MERKEZ",
-            "benzin": 55.54,
-            "motorin": 56.23
+            "benzin": 55.63,
+            "motorin": 56.28
         },
         {
             "plaka": 12,
-            "sehir": "BİNGÖL",
+            "sehir": "BATMAN",
             "ilce": "MERKEZ",
-            "benzin": 56.5,
-            "motorin": 57.41
+            "benzin": 56.59,
+            "motorin": 57.46
         },
         {
             "plaka": 13,
-            "sehir": "BİTLİS",
+            "sehir": "BİLECİK",
             "ilce": "MERKEZ",
-            "benzin": 55.19,
-            "motorin": 55.85
+            "benzin": 55.28,
+            "motorin": 55.9
         },
         {
             "plaka": 14,
             "sehir": "BOLU",
             "ilce": "MERKEZ",
-            "benzin": 55.31,
-            "motorin": 55.97
+            "benzin": 55.4,
+            "motorin": 56.02
         },
         {
             "plaka": 15,
             "sehir": "BURDUR",
             "ilce": "MERKEZ",
-            "benzin": 56.28,
-            "motorin": 57.23
+            "benzin": 56.37,
+            "motorin": 57.28
         },
         {
             "plaka": 16,
             "sehir": "BURSA",
             "ilce": "MERKEZ",
-            "benzin": 55.31,
-            "motorin": 55.99
+            "benzin": 55.4,
+            "motorin": 56.04
         },
         {
             "plaka": 17,
             "sehir": "ÇANAKKALE",
             "ilce": "MERKEZ",
-            "benzin": 55.88,
-            "motorin": 56.74
+            "benzin": 55.97,
+            "motorin": 56.79
         },
         {
             "plaka": 18,
             "sehir": "ÇANKIRI",
             "ilce": "MERKEZ",
-            "benzin": 55.58,
-            "motorin": 56.45
+            "benzin": 55.67,
+            "motorin": 56.5
         },
         {
             "plaka": 19,
             "sehir": "ÇORUM",
             "ilce": "MERKEZ",
-            "benzin": 55.83,
-            "motorin": 56.68
+            "benzin": 55.92,
+            "motorin": 56.73
         },
         {
             "plaka": 20,
             "sehir": "DENİZLİ",
             "ilce": "MERKEZ",
-            "benzin": 55.95,
-            "motorin": 56.89
+            "benzin": 56.04,
+            "motorin": 56.94
         },
         {
             "plaka": 21,
             "sehir": "DİYARBAKIR",
             "ilce": "MERKEZ",
-            "benzin": 56.49,
-            "motorin": 57.41
+            "benzin": 56.58,
+            "motorin": 57.46
         },
         {
             "plaka": 22,
-            "sehir": "EDİRNE",
+            "sehir": "DÜZCE",
             "ilce": "MERKEZ",
-            "benzin": 55.15,
-            "motorin": 55.82
+            "benzin": 55.24,
+            "motorin": 55.87
         },
         {
             "plaka": 23,
-            "sehir": "ELAZIĞ",
+            "sehir": "EDİRNE",
             "ilce": "MERKEZ",
-            "benzin": 55.35,
-            "motorin": 56.25
+            "benzin": 55.44,
+            "motorin": 56.3
         },
         {
             "plaka": 24,
             "sehir": "ERZİNCAN",
             "ilce": "MERKEZ",
-            "benzin": 56.23,
-            "motorin": 57.1
+            "benzin": 56.32,
+            "motorin": 57.15
         },
         {
             "plaka": 25,
             "sehir": "ERZURUM",
             "ilce": "MERKEZ",
-            "benzin": 56.28,
-            "motorin": 57.16
+            "benzin": 56.37,
+            "motorin": 57.21
         },
         {
             "plaka": 26,
             "sehir": "ESKİŞEHİR",
             "ilce": "MERKEZ",
-            "benzin": 55.5,
-            "motorin": 56.18
+            "benzin": 55.59,
+            "motorin": 56.23
         },
         {
             "plaka": 27,
             "sehir": "GAZİANTEP",
             "ilce": "MERKEZ",
-            "benzin": 56.2,
-            "motorin": 57.06
+            "benzin": 56.29,
+            "motorin": 57.11
         },
         {
             "plaka": 28,
             "sehir": "GİRESUN",
             "ilce": "MERKEZ",
-            "benzin": 56.04,
-            "motorin": 56.92
+            "benzin": 56.13,
+            "motorin": 56.97
         },
         {
             "plaka": 29,
-            "sehir": "GÜMÜŞHANE",
+            "sehir": "HATAY",
             "ilce": "MERKEZ",
-            "benzin": 55.93,
-            "motorin": 56.82
+            "benzin": 56.02,
+            "motorin": 56.87
         },
         {
             "plaka": 30,
-            "sehir": "HAKKARİ",
+            "sehir": "IĞDIR",
             "ilce": "MERKEZ",
-            "benzin": 56.52,
-            "motorin": 57.4
+            "benzin": 56.61,
+            "motorin": 57.45
         },
         {
             "plaka": 31,
-            "sehir": "HATAY",
+            "sehir": "ISPARTA",
             "ilce": "MERKEZ",
-            "benzin": 56.28,
-            "motorin": 57.3
+            "benzin": 56.37,
+            "motorin": 57.34
+        },
+        {
+            "plaka": 32,
+            "sehir": "İSTANBUL",
+            "ilce": "MERKEZ-ANADOLU",
+            "benzin": 54.27,
+            "motorin": 54.95
         },
         {
             "plaka": 33,
-            "sehir": "MERSİN",
+            "sehir": "İZMİR",
             "ilce": "MERKEZ",
-            "benzin": 55.51,
-            "motorin": 56.38
+            "benzin": 55.6,
+            "motorin": 56.43
         },
         {
             "plaka": 34,
-            "sehir": "İSTANBUL",
+            "sehir": "KAHRAMANMARAŞ",
             "ilce": "MERKEZ",
-            "benzin": 56.18,
-            "motorin": 57.09
+            "benzin": 56.27,
+            "motorin": 57.14
         },
         {
             "plaka": 35,
-            "sehir": "İZMİR",
+            "sehir": "KARABÜK",
             "ilce": "MERKEZ",
-            "benzin": 55.56,
-            "motorin": 56.24
+            "benzin": 55.65,
+            "motorin": 56.29
         },
         {
             "plaka": 36,
-            "sehir": "KARS",
+            "sehir": "KARAMAN",
             "ilce": "MERKEZ",
-            "benzin": 56.11,
-            "motorin": 57.0
+            "benzin": 56.2,
+            "motorin": 57.05
         },
         {
             "plaka": 37,
             "sehir": "KASTAMONU",
             "ilce": "MERKEZ",
-            "benzin": 55.93,
-            "motorin": 56.78
+            "benzin": 56.02,
+            "motorin": 56.83
         },
         {
             "plaka": 38,
             "sehir": "KAYSERİ",
             "ilce": "MERKEZ",
-            "benzin": 56.23,
-            "motorin": 57.11
+            "benzin": 56.32,
+            "motorin": 57.16
         },
         {
             "plaka": 39,
-            "sehir": "KIRKLARELİ",
+            "sehir": "KIRIKKALE",
             "ilce": "MERKEZ",
-            "benzin": 55.48,
-            "motorin": 56.34
+            "benzin": 55.57,
+            "motorin": 56.39
         },
         {
             "plaka": 40,
-            "sehir": "KIRŞEHİR",
+            "sehir": "KIRKLARELİ",
             "ilce": "MERKEZ",
-            "benzin": 55.34,
-            "motorin": 56.23
+            "benzin": 55.43,
+            "motorin": 56.28
         },
         {
             "plaka": 41,
-            "sehir": "KOCAELİ",
+            "sehir": "KIRŞEHİR",
             "ilce": "MERKEZ",
-            "benzin": 55.52,
-            "motorin": 56.4
-        },
-        {
-            "plaka": 42,
-            "sehir": "KONYA",
-            "ilce": "MERKEZ",
-            "benzin": 54.67,
-            "motorin": 55.35
-        },
-        {
-            "plaka": 43,
-            "sehir": "KÜTAHYA",
-            "ilce": "MERKEZ",
-            "benzin": 56.24,
-            "motorin": 57.26
-        },
-        {
-            "plaka": 44,
-            "sehir": "MALATYA",
-            "ilce": "MERKEZ",
-            "benzin": 56.15,
-            "motorin": 56.86
-        },
-        {
-            "plaka": 45,
-            "sehir": "MANİSA",
-            "ilce": "MERKEZ",
-            "benzin": 56.4,
-            "motorin": 57.29
-        },
-        {
-            "plaka": 46,
-            "sehir": "KAHRAMANMARAŞ",
-            "ilce": "MERKEZ",
-            "benzin": 55.59,
+            "benzin": 55.61,
             "motorin": 56.45
         },
         {
-            "plaka": 47,
-            "sehir": "MARDİN",
+            "plaka": 42,
+            "sehir": "KOCAELİ",
             "ilce": "MERKEZ",
-            "benzin": 56.05,
-            "motorin": 56.92
+            "benzin": 54.76,
+            "motorin": 55.4
+        },
+        {
+            "plaka": 43,
+            "sehir": "KONYA",
+            "ilce": "MERKEZ",
+            "benzin": 56.33,
+            "motorin": 57.31
+        },
+        {
+            "plaka": 44,
+            "sehir": "KÜTAHYA",
+            "ilce": "MERKEZ",
+            "benzin": 56.24,
+            "motorin": 56.91
+        },
+        {
+            "plaka": 45,
+            "sehir": "MALATYA",
+            "ilce": "MERKEZ",
+            "benzin": 56.49,
+            "motorin": 57.34
+        },
+        {
+            "plaka": 46,
+            "sehir": "MANİSA",
+            "ilce": "MERKEZ",
+            "benzin": 55.68,
+            "motorin": 56.5
+        },
+        {
+            "plaka": 47,
+            "sehir": "MERSİN",
+            "ilce": "MERKEZ",
+            "benzin": 56.14,
+            "motorin": 56.97
         },
         {
             "plaka": 48,
             "sehir": "MUĞLA",
             "ilce": "MERKEZ",
-            "benzin": 55.99,
-            "motorin": 56.89
-        },
-        {
-            "plaka": 49,
-            "sehir": "MUŞ",
-            "ilce": "MERKEZ",
-            "benzin": 56.13,
-            "motorin": 57.02
-        },
-        {
-            "plaka": 50,
-            "sehir": "NEVŞEHİR",
-            "ilce": "MERKEZ",
-            "benzin": 56.05,
+            "benzin": 56.08,
             "motorin": 56.93
         },
         {
-            "plaka": 51,
+            "plaka": 49,
+            "sehir": "NEVŞEHİR",
+            "ilce": "MERKEZ",
+            "benzin": 56.22,
+            "motorin": 57.07
+        },
+        {
+            "plaka": 50,
             "sehir": "NİĞDE",
             "ilce": "MERKEZ",
-            "benzin": 55.84,
-            "motorin": 56.68
+            "benzin": 56.14,
+            "motorin": 56.98
+        },
+        {
+            "plaka": 51,
+            "sehir": "ORDU",
+            "ilce": "MERKEZ",
+            "benzin": 55.93,
+            "motorin": 56.73
         },
         {
             "plaka": 52,
-            "sehir": "ORDU",
+            "sehir": "OSMANİYE",
             "ilce": "MERKEZ",
-            "benzin": 55.92,
-            "motorin": 56.82
+            "benzin": 56.01,
+            "motorin": 56.87
         },
         {
             "plaka": 53,
             "sehir": "RİZE",
             "ilce": "MERKEZ",
-            "benzin": 55.98,
-            "motorin": 56.84
+            "benzin": 56.07,
+            "motorin": 56.89
         },
         {
             "plaka": 54,
             "sehir": "SAKARYA",
             "ilce": "MERKEZ",
-            "benzin": 54.99,
-            "motorin": 55.64
+            "benzin": 55.08,
+            "motorin": 55.69
         },
         {
             "plaka": 55,
             "sehir": "SAMSUN",
             "ilce": "MERKEZ",
-            "benzin": 55.81,
-            "motorin": 56.67
+            "benzin": 55.9,
+            "motorin": 56.72
         },
         {
             "plaka": 56,
-            "sehir": "SİİRT",
+            "sehir": "SİVAS",
             "ilce": "MERKEZ",
-            "benzin": 56.18,
-            "motorin": 57.03
+            "benzin": 56.27,
+            "motorin": 57.08
         },
         {
             "plaka": 57,
             "sehir": "SİNOP",
             "ilce": "MERKEZ",
-            "benzin": 55.87,
-            "motorin": 56.73
+            "benzin": 55.96,
+            "motorin": 56.78
         },
         {
             "plaka": 58,
-            "sehir": "SİVAS",
+            "sehir": "ŞANLIURFA",
             "ilce": "MERKEZ",
-            "benzin": 56.38,
-            "motorin": 57.27
+            "benzin": 56.47,
+            "motorin": 57.32
         },
         {
             "plaka": 59,
             "sehir": "TEKİRDAĞ",
             "ilce": "MERKEZ",
-            "benzin": 54.94,
-            "motorin": 55.83
+            "benzin": 55.03,
+            "motorin": 55.88
         },
         {
             "plaka": 60,
             "sehir": "TOKAT",
             "ilce": "MERKEZ",
-            "benzin": 55.87,
-            "motorin": 56.73
+            "benzin": 55.96,
+            "motorin": 56.78
         },
         {
             "plaka": 61,
             "sehir": "TRABZON",
             "ilce": "MERKEZ",
-            "benzin": 55.97,
-            "motorin": 56.83
+            "benzin": 56.06,
+            "motorin": 56.88
         },
         {
             "plaka": 62,
-            "sehir": "TUNCELİ",
+            "sehir": "UŞAK",
             "ilce": "MERKEZ",
-            "benzin": 55.96,
-            "motorin": 56.86
+            "benzin": 56.05,
+            "motorin": 56.91
         },
         {
             "plaka": 63,
-            "sehir": "ŞANLIURFA",
+            "sehir": "YALOVA",
             "ilce": "MERKEZ",
-            "benzin": 54.95,
-            "motorin": 55.63
+            "benzin": 55.04,
+            "motorin": 55.68
         },
         {
             "plaka": 64,
-            "sehir": "UŞAK",
+            "sehir": "YOZGAT",
             "ilce": "MERKEZ",
-            "benzin": 55.86,
-            "motorin": 56.73
+            "benzin": 55.95,
+            "motorin": 56.78
         },
         {
             "plaka": 65,
-            "sehir": "VAN",
+            "sehir": "ZONGULDAK",
             "ilce": "MERKEZ",
-            "benzin": 55.5,
-            "motorin": 56.18
+            "benzin": 55.59,
+            "motorin": 56.23
         },
         {
             "plaka": 66,
-            "sehir": "YOZGAT",
+            "sehir": "ARTVİN",
             "ilce": "MERKEZ",
-            "benzin": 56.12,
-            "motorin": 56.98
+            "benzin": 56.21,
+            "motorin": 57.03
         },
         {
             "plaka": 67,
-            "sehir": "ZONGULDAK",
+            "sehir": "BİNGÖL",
             "ilce": "MERKEZ",
-            "benzin": 56.52,
-            "motorin": 57.47
+            "benzin": 56.61,
+            "motorin": 57.52
         },
         {
             "plaka": 68,
-            "sehir": "AKSARAY",
+            "sehir": "BİTLİS",
             "ilce": "MERKEZ",
-            "benzin": 56.61,
-            "motorin": 57.56
+            "benzin": 56.7,
+            "motorin": 57.61
         },
         {
             "plaka": 69,
-            "sehir": "BAYBURT",
+            "sehir": "ELAZIĞ",
             "ilce": "MERKEZ",
-            "benzin": 56.61,
-            "motorin": 57.54
+            "benzin": 56.7,
+            "motorin": 57.59
         },
         {
             "plaka": 70,
-            "sehir": "KARAMAN",
+            "sehir": "GÜMÜŞHANE",
             "ilce": "MERKEZ",
-            "benzin": 56.0,
-            "motorin": 56.86
+            "benzin": 56.09,
+            "motorin": 56.91
         },
         {
             "plaka": 71,
-            "sehir": "KIRIKKALE",
+            "sehir": "HAKKARİ",
             "ilce": "MERKEZ",
-            "benzin": 56.62,
-            "motorin": 57.56
+            "benzin": 56.71,
+            "motorin": 57.59
         },
         {
             "plaka": 72,
-            "sehir": "BATMAN",
+            "sehir": "KARS",
             "ilce": "MERKEZ",
-            "benzin": 56.29,
-            "motorin": 57.16
+            "benzin": 56.38,
+            "motorin": 57.21
         },
         {
             "plaka": 73,
-            "sehir": "ŞIRNAK",
+            "sehir": "MARDİN",
             "ilce": "MERKEZ",
-            "benzin": 56.51,
-            "motorin": 57.42
+            "benzin": 56.6,
+            "motorin": 57.47
         },
         {
             "plaka": 74,
-            "sehir": "BARTIN",
+            "sehir": "MUŞ",
             "ilce": "MERKEZ",
-            "benzin": 56.54,
-            "motorin": 57.46
+            "benzin": 56.63,
+            "motorin": 57.51
         },
         {
             "plaka": 78,
-            "sehir": "KARABÜK",
+            "sehir": "SİİRT",
             "ilce": "MERKEZ",
-            "benzin": 56.54,
-            "motorin": 57.45
+            "benzin": 56.63,
+            "motorin": 57.5
         },
         {
             "plaka": 79,
-            "sehir": "KİLİS",
+            "sehir": "TUNCELİ",
             "ilce": "MERKEZ",
-            "benzin": 56.52,
-            "motorin": 57.44
+            "benzin": 56.61,
+            "motorin": 57.49
         },
         {
             "plaka": 80,
-            "sehir": "OSMANİYE",
+            "sehir": "VAN",
             "ilce": "MERKEZ",
-            "benzin": 56.61,
-            "motorin": 57.46
+            "benzin": 56.7,
+            "motorin": 57.51
         },
         {
             "plaka": 81,
-            "sehir": "DÜZCE",
+            "sehir": "BAYBURT",
             "ilce": "MERKEZ",
-            "benzin": 55.99,
-            "motorin": 56.86
+            "benzin": 56.08,
+            "motorin": 56.91
+        },
+        {
+            "plaka": 82,
+            "sehir": "ŞIRNAK",
+            "ilce": "MERKEZ",
+            "benzin": 56.68,
+            "motorin": 57.56
+        },
+        {
+            "plaka": 84,
+            "sehir": "ARDAHAN",
+            "ilce": "MERKEZ",
+            "benzin": 56.38,
+            "motorin": 57.22
+        },
+        {
+            "plaka": 86,
+            "sehir": "KİLİS",
+            "ilce": "MERKEZ",
+            "benzin": 56.02,
+            "motorin": 56.88
         }
     ]
 }
