@@ -8,7 +8,8 @@ from spark_queries import (
     query_top_stories,
     query_statistics,
     query_top_authors,
-    query_top_articles_by_points
+    query_top_articles_by_points,
+    query_articles,
 )
 
 # Logging setup
@@ -111,6 +112,29 @@ def api_top_articles():
         spark, df = init_spark()
         limit = request.args.get('limit', 10, type=int)
         articles = query_top_articles_by_points(df, limit)
+        return jsonify({
+            "success": True,
+            "data": articles,
+            "count": len(articles)
+        })
+    except Exception as e:
+        return jsonify({
+            "success": False,
+            "error": str(e)
+        }), 500
+
+@app.route('/api/articles', methods=['GET'])
+def api_articles():
+    """Başlığa, yazara ve tarihe göre arama"""
+    try:
+        spark, df = init_spark()
+        keyword = request.args.get('keyword')
+        author = request.args.get('author')
+        sort = request.args.get('sort', 'date_desc')
+        limit = request.args.get('limit', 20, type=int)
+
+        articles = query_articles(df, keyword=keyword, author=author, sort=sort, limit=limit)
+
         return jsonify({
             "success": True,
             "data": articles,

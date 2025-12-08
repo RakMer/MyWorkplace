@@ -23,14 +23,27 @@ def get_dataframe(spark):
         client = MongoClient("mongodb://localhost:27017/")
         db = client["HackerNewsDB"]
         collection = db["HackerNews"]
-        
+
         # Verileri al — `_id` alanını hariç tut ve gelen dökümanları sanitize et
-        cursor = collection.find({}, {"_id": 0, "title": 1, "author": 1, "story_id": 1, "points": 1})
+        cursor = collection.find(
+            {},
+            {
+                "_id": 0,
+                "title": 1,
+                "author": 1,
+                "story_id": 1,
+                "points": 1,
+                "created_at_i": 1,
+            },
+        )
         raw_data = list(cursor)
 
         if not raw_data:
             print("Uyarı: MongoDB'den veri alınamadı. Boş bir DataFrame döndürülüyor.")
-            return spark.createDataFrame([], "title STRING, author STRING, story_id STRING, points INT")
+            return spark.createDataFrame(
+                [],
+                "title STRING, author STRING, story_id STRING, points INT, created_at_i LONG, created_at TIMESTAMP",
+            )
 
         # Mongo dökümanlarını Spark uyumlu basit dict'lere dönüştür
         data = []
@@ -52,16 +65,35 @@ def get_dataframe(spark):
                 except Exception:
                     points = None
 
-            data.append({"title": title, "author": author, "story_id": story_id, "points": points})
+            created_at_i = doc.get("created_at_i")
+            if created_at_i is not None:
+                try:
+                    created_at_i = int(created_at_i)
+                except Exception:
+                    created_at_i = None
+
+            data.append(
+                {
+                    "title": title,
+                    "author": author,
+                    "story_id": story_id,
+                    "points": points,
+                    "created_at_i": created_at_i,
+                }
+            )
 
         # DataFrame oluştur
         df = spark.createDataFrame(data)
+        df = df.withColumn("created_at", F.to_timestamp(F.from_unixtime(F.col("created_at_i"))))
         spark.sparkContext.setLogLevel("ERROR")
         return df
     except Exception as e:
         print(f"MongoDB bağlantı hatası: {e}")
         print("Boş DataFrame döndürülüyor...")
-        return spark.createDataFrame([], "title STRING, author STRING, story_id STRING, points INT")
+        return spark.createDataFrame(
+            [],
+            "title STRING, author STRING, story_id STRING, points INT, created_at_i LONG, created_at TIMESTAMP",
+        )
 
 def query_ai_articles(df, limit=50):
     """AI başlıklı makaleleri bul"""
@@ -115,3 +147,52 @@ def query_top_articles_by_points(df, limit=10):
         .collect()
     )
     return [{"title": row["title"], "points": row["points"]} for row in result]
+
+
+def query_articles(df, keyword=None, author=None, sort="date_desc", limit=20):
+    """Başlık, yazar ve tarihe göre arama/filtreleme"""
+    try:
+        limit_val = int(limit or 20)
+    except Exception:
+        limit_val = 20
+    limit = max(1, min(limit_val, 100))
+
+    result_df = df
+
+    if keyword:
+        kw = keyword.lower()
+        result_df = result_df.filter(F.lower(F.col("title")).contains(kw))
+
+    if author:
+        au = author.lower()
+        result_df = result_df.filter(F.lower(F.col("author")) == au)
+
+    sort_key = {
+        "date_desc": F.col("created_at").desc_nulls_last(),
+        "date_asc": F.col("created_at").asc_nulls_last(),
+        "points_desc": F.col("points").desc_nulls_last(),
+        "points_asc": F.col("points").asc_nulls_last(),
+    }.get(sort, F.col("created_at").desc_nulls_last())
+
+    result = (
+        result_df
+        .select("title", "author", "points", "created_at")
+        .orderBy(sort_key)
+        .limit(limit)
+        .collect()
+    )
+
+    articles = []
+    for row in result:
+        created_at = row["created_at"]
+        created_at_iso = created_at.isoformat() if created_at else None
+        articles.append(
+            {
+                "title": row["title"],
+                "author": row["author"],
+                "points": row["points"],
+                "created_at": created_at_iso,
+            }
+        )
+
+    return articles

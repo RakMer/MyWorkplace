@@ -2,6 +2,14 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     loadAllData();
+
+    const searchForm = document.getElementById('search-form');
+    if (searchForm) {
+        searchForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            await runSearch();
+        });
+    }
 });
 
 function showLoading() {
@@ -19,6 +27,41 @@ function showError(message) {
     setTimeout(() => {
         errorDiv.classList.add('hidden');
     }, 5000);
+}
+
+async function runSearch() {
+    const container = document.getElementById('search-results');
+    if (!container) return;
+
+    container.classList.add('loading');
+    container.innerHTML = '<p>Arama yapılıyor...</p>';
+
+    const keyword = document.getElementById('keyword')?.value.trim();
+    const author = document.getElementById('author')?.value.trim();
+    const sort = document.getElementById('sort')?.value || 'date_desc';
+
+    const params = new URLSearchParams();
+    if (keyword) params.append('keyword', keyword);
+    if (author) params.append('author', author);
+    if (sort) params.append('sort', sort);
+
+    try {
+        const response = await fetch(`/api/articles?${params.toString()}`);
+        const result = await response.json();
+
+        if (!result.success) {
+            showError(result.error || 'Arama başarısız');
+            container.classList.remove('loading');
+            return;
+        }
+
+        displaySearchResults(result.data || []);
+    } catch (error) {
+        console.error('Arama hatası:', error);
+        showError('Sunucuya bağlanılamadı');
+    } finally {
+        container.classList.remove('loading');
+    }
 }
 
 async function loadAllData() {
@@ -157,6 +200,41 @@ function displayTopArticles(articles) {
             <p class="label">Puan</p>
             <p class="value">${points.toLocaleString('tr-TR')}</p>
         `;
+        container.appendChild(card);
+    });
+
+    container.classList.remove('loading');
+}
+
+function displaySearchResults(articles) {
+    const container = document.getElementById('search-results');
+    if (!container) return;
+
+    container.innerHTML = '';
+
+    if (!articles || articles.length === 0) {
+        container.innerHTML = '<p style="grid-column: 1/-1;">Sonuç bulunamadı</p>';
+        return;
+    }
+
+    articles.forEach((article, index) => {
+        const card = document.createElement('div');
+        card.className = 'data-card';
+        const title = article.title ? escapeHtml(String(article.title)) : 'Başlık yok';
+        const author = article.author ? escapeHtml(String(article.author)) : 'Bilinmeyen';
+        const points = article.points || 0;
+        const createdAt = article.created_at ? new Date(article.created_at).toLocaleString('tr-TR') : 'Tarih yok';
+
+        card.innerHTML = `
+            <h4>#${index + 1} - ${title}</h4>
+            <p class="label">Yazar</p>
+            <p>${author}</p>
+            <p class="label">Puan</p>
+            <p class="value">${points.toLocaleString('tr-TR')}</p>
+            <p class="label">Tarih</p>
+            <p>${createdAt}</p>
+        `;
+
         container.appendChild(card);
     });
 
