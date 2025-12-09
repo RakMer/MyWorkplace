@@ -1,2623 +1,492 @@
 {
-    "son_guncelleme": "09.12.2025 16:30",
-    "kaynak": "Shell",
-    "url": "https://www.turkiyeshell.com/pompatest/",
+    "son_guncelleme": "09.12.2025 16:52",
+    "kaynak": "Lukoil",
     "veriler": [
         {
             "sehir": "ADANA",
             "ilce": "MERKEZ",
-            "benzin": 56.18,
-            "motorin": 57.01
-        },
-        {
-            "sehir": "ADANA",
-            "ilce": "ALADAG",
-            "benzin": 56.18,
-            "motorin": 57.01
-        },
-        {
-            "sehir": "ADANA",
-            "ilce": "CEYHAN",
-            "benzin": 56.18,
-            "motorin": 57.01
-        },
-        {
-            "sehir": "ADANA",
-            "ilce": "IMAMOGLU",
-            "benzin": 56.18,
-            "motorin": 57.01
-        },
-        {
-            "sehir": "ADANA",
-            "ilce": "KARATAS",
-            "benzin": 56.18,
-            "motorin": 57.01
-        },
-        {
-            "sehir": "ADANA",
-            "ilce": "KOZAN",
-            "benzin": 56.18,
-            "motorin": 57.01
-        },
-        {
-            "sehir": "ADANA",
-            "ilce": "POZANTI",
-            "benzin": 56.18,
-            "motorin": 57.01
-        },
-        {
-            "sehir": "ADANA",
-            "ilce": "SARICAM",
-            "benzin": 56.18,
-            "motorin": 57.01
-        },
-        {
-            "sehir": "ADANA",
-            "ilce": "SEYHAN",
-            "benzin": 56.18,
-            "motorin": 57.01
-        },
-        {
-            "sehir": "ADANA",
-            "ilce": "YUREGIR",
-            "benzin": 56.18,
-            "motorin": 57.01
+            "benzin": 56.03,
+            "motorin": 56.88
         },
         {
             "sehir": "ADIYAMAN",
             "ilce": "MERKEZ",
-            "benzin": 56.5,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "ADIYAMAN",
-            "ilce": "GOLBASI",
-            "benzin": 56.5,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "ADIYAMAN",
-            "ilce": "KAHTA",
-            "benzin": 56.5,
-            "motorin": 57.36
+            "benzin": 56.35,
+            "motorin": 57.27
         },
         {
             "sehir": "AFYON",
             "ilce": "MERKEZ",
-            "benzin": 56.43,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "AFYON",
-            "ilce": "BOLVADIN",
-            "benzin": 56.43,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "AFYON",
-            "ilce": "CAY",
-            "benzin": 56.43,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "AFYON",
-            "ilce": "DINAR",
-            "benzin": 56.43,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "AFYON",
-            "ilce": "EMIRDAG",
-            "benzin": 56.43,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "AFYON",
-            "ilce": "ISCEHISAR",
-            "benzin": 56.43,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "AFYON",
-            "ilce": "SANDIKLI",
-            "benzin": 56.43,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "AFYON",
-            "ilce": "SINANPASA",
-            "benzin": 56.43,
-            "motorin": 57.36
+            "benzin": 56.32,
+            "motorin": 57.27
         },
         {
             "sehir": "AGRI",
             "ilce": "MERKEZ",
-            "benzin": 56.68,
-            "motorin": 57.5
+            "benzin": 56.52,
+            "motorin": 57.36
         },
         {
             "sehir": "AKSARAY",
             "ilce": "MERKEZ",
-            "benzin": 56.25,
-            "motorin": 57.09
-        },
-        {
-            "sehir": "AKSARAY",
-            "ilce": "ESKIL",
-            "benzin": 56.25,
-            "motorin": 57.09
+            "benzin": 56.14,
+            "motorin": 57.07
         },
         {
             "sehir": "AMASYA",
+            "ilce": "AMASYA",
+            "benzin": 55.84,
+            "motorin": 56.68
+        },
+        {
+            "sehir": "ANKARA",
             "ilce": "MERKEZ",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "AMASYA",
-            "ilce": "GUMUSHACIKOY",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "AMASYA",
-            "ilce": "MERZIFON",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "AMASYA",
-            "ilce": "SULUOVA",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "AMASYA",
-            "ilce": "TASOVA",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "ALTINDAG",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "BEYPAZARI",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "CANKAYA",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "ELMADAG",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "ETIMESGUT",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "GOLBASI",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "GUDUL",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "HAYMANA",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "KAZAN",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "KECIOREN",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "KIZILCAHAMAM",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "MAMAK",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "POLATLI",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "PURSAKLAR",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "S.KOCHISAR",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "SINCAN",
-            "benzin": 55.28,
-            "motorin": 56.11
-        },
-        {
-            "sehir": "ANKARA",
-            "ilce": "YENIMAHALLE",
-            "benzin": 55.28,
-            "motorin": 56.11
+            "benzin": 55.18,
+            "motorin": 56.06
         },
         {
             "sehir": "ANTALYA",
             "ilce": "MERKEZ",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "AKSU",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "ALANYA",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "DOSEMEALTI",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "FINIKE",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "GAZIPASA",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "KAS",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "KEMER",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "KEPEZ",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "KONYAALTI",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "KORKUTELI",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "KUMLUCA",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "MANAVGAT",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "MURATPASA",
-            "benzin": 56.57,
-            "motorin": 57.5
-        },
-        {
-            "sehir": "ANTALYA",
-            "ilce": "SERIK",
-            "benzin": 56.57,
-            "motorin": 57.5
+            "benzin": 56.41,
+            "motorin": 57.38
         },
         {
             "sehir": "ARDAHAN",
             "ilce": "MERKEZ",
-            "benzin": 56.4,
-            "motorin": 57.24
+            "benzin": 56.24,
+            "motorin": 57.08
         },
         {
             "sehir": "ARTVIN",
-            "ilce": "BORCKA",
-            "benzin": 56.22,
-            "motorin": 57.04
+            "ilce": "MERKEZ",
+            "benzin": 56.11,
+            "motorin": 56.92
         },
         {
             "sehir": "AYDIN",
             "ilce": "MERKEZ",
-            "benzin": 55.84,
-            "motorin": 56.67
-        },
-        {
-            "sehir": "AYDIN",
-            "ilce": "CINE",
-            "benzin": 55.84,
-            "motorin": 56.67
-        },
-        {
-            "sehir": "AYDIN",
-            "ilce": "DIDIM",
-            "benzin": 55.84,
-            "motorin": 56.67
-        },
-        {
-            "sehir": "AYDIN",
-            "ilce": "GERMENCIK",
-            "benzin": 55.84,
-            "motorin": 56.67
-        },
-        {
-            "sehir": "AYDIN",
-            "ilce": "INCIRLIOVA",
-            "benzin": 55.84,
-            "motorin": 56.67
-        },
-        {
-            "sehir": "AYDIN",
-            "ilce": "KARACASU",
-            "benzin": 55.84,
-            "motorin": 56.67
-        },
-        {
-            "sehir": "AYDIN",
-            "ilce": "KOCARLI",
-            "benzin": 55.84,
-            "motorin": 56.67
-        },
-        {
-            "sehir": "AYDIN",
-            "ilce": "KOSK",
-            "benzin": 55.84,
-            "motorin": 56.67
-        },
-        {
-            "sehir": "AYDIN",
-            "ilce": "KUSADASI",
-            "benzin": 55.84,
-            "motorin": 56.67
-        },
-        {
-            "sehir": "AYDIN",
-            "ilce": "NAZILLI",
-            "benzin": 55.84,
-            "motorin": 56.67
-        },
-        {
-            "sehir": "AYDIN",
-            "ilce": "SOKE",
-            "benzin": 55.84,
-            "motorin": 56.67
-        },
-        {
-            "sehir": "AYDIN",
-            "ilce": "SULTANHISAR",
-            "benzin": 55.84,
-            "motorin": 56.67
+            "benzin": 55.7,
+            "motorin": 56.55
         },
         {
             "sehir": "BALIKESIR",
             "ilce": "MERKEZ",
-            "benzin": 55.95,
-            "motorin": 56.77
-        },
-        {
-            "sehir": "BALIKESIR",
-            "ilce": "ALTIEYLUL",
-            "benzin": 55.95,
-            "motorin": 56.77
-        },
-        {
-            "sehir": "BALIKESIR",
-            "ilce": "AYVALIK",
-            "benzin": 55.95,
-            "motorin": 56.77
-        },
-        {
-            "sehir": "BALIKESIR",
-            "ilce": "BANDIRMA",
-            "benzin": 55.95,
-            "motorin": 56.77
-        },
-        {
-            "sehir": "BALIKESIR",
-            "ilce": "BURHANIYE",
-            "benzin": 55.95,
-            "motorin": 56.77
-        },
-        {
-            "sehir": "BALIKESIR",
-            "ilce": "EDREMIT",
-            "benzin": 55.95,
-            "motorin": 56.77
-        },
-        {
-            "sehir": "BALIKESIR",
-            "ilce": "GONEN",
-            "benzin": 55.95,
-            "motorin": 56.77
-        },
-        {
-            "sehir": "BALIKESIR",
-            "ilce": "IVRINDI",
-            "benzin": 55.95,
-            "motorin": 56.77
-        },
-        {
-            "sehir": "BALIKESIR",
-            "ilce": "KARESİ",
-            "benzin": 55.95,
-            "motorin": 56.77
-        },
-        {
-            "sehir": "BALIKESIR",
-            "ilce": "SUSURLUK",
-            "benzin": 55.95,
-            "motorin": 56.77
+            "benzin": 55.8,
+            "motorin": 56.68
         },
         {
             "sehir": "BARTIN",
             "ilce": "MERKEZ",
-            "benzin": 55.65,
-            "motorin": 56.3
+            "benzin": 55.5,
+            "motorin": 56.26
         },
         {
             "sehir": "BATMAN",
             "ilce": "MERKEZ",
-            "benzin": 56.6,
-            "motorin": 57.47
+            "benzin": 56.47,
+            "motorin": 57.36
         },
         {
             "sehir": "BAYBURT",
             "ilce": "MERKEZ",
-            "benzin": 56.1,
-            "motorin": 56.92
+            "benzin": 55.97,
+            "motorin": 56.77
         },
         {
             "sehir": "BILECIK",
             "ilce": "MERKEZ",
-            "benzin": 55.29,
-            "motorin": 55.91
-        },
-        {
-            "sehir": "BILECIK",
-            "ilce": "BOZUYUK",
-            "benzin": 55.29,
-            "motorin": 55.91
-        },
-        {
-            "sehir": "BILECIK",
-            "ilce": "PAZARYERI",
-            "benzin": 55.29,
-            "motorin": 55.91
+            "benzin": 55.19,
+            "motorin": 55.97
         },
         {
             "sehir": "BINGOL",
             "ilce": "MERKEZ",
-            "benzin": 56.63,
-            "motorin": 57.53
+            "benzin": 56.43,
+            "motorin": 57.44
         },
         {
             "sehir": "BITLIS",
             "ilce": "MERKEZ",
-            "benzin": 56.72,
-            "motorin": 57.64
-        },
-        {
-            "sehir": "BITLIS",
-            "ilce": "TATVAN",
-            "benzin": 56.72,
-            "motorin": 57.64
+            "benzin": 56.49,
+            "motorin": 57.43
         },
         {
             "sehir": "BOLU",
             "ilce": "MERKEZ",
-            "benzin": 55.41,
-            "motorin": 56.02
-        },
-        {
-            "sehir": "BOLU",
-            "ilce": "DORTDIVAN",
-            "benzin": 55.41,
-            "motorin": 56.02
-        },
-        {
-            "sehir": "BOLU",
-            "ilce": "GEREDE",
-            "benzin": 55.41,
-            "motorin": 56.02
+            "benzin": 55.34,
+            "motorin": 55.98
         },
         {
             "sehir": "BURDUR",
             "ilce": "MERKEZ",
-            "benzin": 56.39,
-            "motorin": 57.32
-        },
-        {
-            "sehir": "BURDUR",
-            "ilce": "BUCAK",
-            "benzin": 56.39,
-            "motorin": 57.32
-        },
-        {
-            "sehir": "BURDUR",
-            "ilce": "CAVDIR",
-            "benzin": 56.39,
-            "motorin": 57.32
-        },
-        {
-            "sehir": "BURDUR",
-            "ilce": "CELTIKCI",
-            "benzin": 56.39,
-            "motorin": 57.32
-        },
-        {
-            "sehir": "BURDUR",
-            "ilce": "KARAMANLI",
-            "benzin": 56.39,
-            "motorin": 57.32
+            "benzin": 56.26,
+            "motorin": 57.13
         },
         {
             "sehir": "BURSA",
             "ilce": "MERKEZ",
-            "benzin": 55.45,
-            "motorin": 56.09
-        },
-        {
-            "sehir": "BURSA",
-            "ilce": "GEMLIK",
-            "benzin": 55.45,
-            "motorin": 56.09
-        },
-        {
-            "sehir": "BURSA",
-            "ilce": "GURSU",
-            "benzin": 55.45,
-            "motorin": 56.09
-        },
-        {
-            "sehir": "BURSA",
-            "ilce": "INEGOL",
-            "benzin": 55.45,
-            "motorin": 56.09
-        },
-        {
-            "sehir": "BURSA",
-            "ilce": "IZNIK",
-            "benzin": 55.45,
-            "motorin": 56.09
-        },
-        {
-            "sehir": "BURSA",
-            "ilce": "KARACABEY",
-            "benzin": 55.45,
-            "motorin": 56.09
-        },
-        {
-            "sehir": "BURSA",
-            "ilce": "KESTEL",
-            "benzin": 55.45,
-            "motorin": 56.09
-        },
-        {
-            "sehir": "BURSA",
-            "ilce": "M.KEMALPASA",
-            "benzin": 55.45,
-            "motorin": 56.09
-        },
-        {
-            "sehir": "BURSA",
-            "ilce": "NILUFER",
-            "benzin": 55.45,
-            "motorin": 56.09
-        },
-        {
-            "sehir": "BURSA",
-            "ilce": "ORHANGAZI",
-            "benzin": 55.45,
-            "motorin": 56.09
-        },
-        {
-            "sehir": "BURSA",
-            "ilce": "OSMANGAZI",
-            "benzin": 55.45,
-            "motorin": 56.09
-        },
-        {
-            "sehir": "BURSA",
-            "ilce": "YENISEHIR",
-            "benzin": 55.45,
-            "motorin": 56.09
-        },
-        {
-            "sehir": "BURSA",
-            "ilce": "YILDIRIM",
-            "benzin": 55.45,
-            "motorin": 56.09
+            "benzin": 55.34,
+            "motorin": 56.01
         },
         {
             "sehir": "CANAKKALE",
             "ilce": "MERKEZ",
-            "benzin": 55.98,
-            "motorin": 56.8
-        },
-        {
-            "sehir": "CANAKKALE",
-            "ilce": "BAYRAMIC",
-            "benzin": 55.98,
-            "motorin": 56.8
-        },
-        {
-            "sehir": "CANAKKALE",
-            "ilce": "BIGA",
-            "benzin": 55.98,
-            "motorin": 56.8
-        },
-        {
-            "sehir": "CANAKKALE",
-            "ilce": "CAN",
-            "benzin": 55.98,
-            "motorin": 56.8
-        },
-        {
-            "sehir": "CANAKKALE",
-            "ilce": "EZINE",
-            "benzin": 55.98,
-            "motorin": 56.8
-        },
-        {
-            "sehir": "CANAKKALE",
-            "ilce": "GELIBOLU",
-            "benzin": 55.98,
-            "motorin": 56.8
-        },
-        {
-            "sehir": "CANAKKALE",
-            "ilce": "LAPSEKI",
-            "benzin": 55.98,
-            "motorin": 56.8
+            "benzin": 55.93,
+            "motorin": 56.78
         },
         {
             "sehir": "CANKIRI",
             "ilce": "MERKEZ",
-            "benzin": 55.69,
-            "motorin": 56.52
-        },
-        {
-            "sehir": "CANKIRI",
-            "ilce": "CERKES",
-            "benzin": 55.69,
-            "motorin": 56.52
-        },
-        {
-            "sehir": "CANKIRI",
-            "ilce": "ILGAZ",
-            "benzin": 55.69,
-            "motorin": 56.52
+            "benzin": 55.53,
+            "motorin": 56.44
         },
         {
             "sehir": "CORUM",
             "ilce": "MERKEZ",
-            "benzin": 55.93,
-            "motorin": 56.75
-        },
-        {
-            "sehir": "CORUM",
-            "ilce": "ALACA",
-            "benzin": 55.93,
-            "motorin": 56.75
-        },
-        {
-            "sehir": "CORUM",
-            "ilce": "OSMANCIK",
-            "benzin": 55.93,
-            "motorin": 56.75
-        },
-        {
-            "sehir": "CORUM",
-            "ilce": "SUNGURLU",
-            "benzin": 55.93,
-            "motorin": 56.75
+            "benzin": 55.92,
+            "motorin": 56.73
         },
         {
             "sehir": "DENIZLI",
             "ilce": "MERKEZ",
-            "benzin": 56.07,
-            "motorin": 56.97
-        },
-        {
-            "sehir": "DENIZLI",
-            "ilce": "CIVRIL",
-            "benzin": 56.07,
-            "motorin": 56.97
-        },
-        {
-            "sehir": "DENIZLI",
-            "ilce": "HONAZ",
-            "benzin": 56.07,
-            "motorin": 56.97
-        },
-        {
-            "sehir": "DENIZLI",
-            "ilce": "KALE",
-            "benzin": 56.07,
-            "motorin": 56.97
-        },
-        {
-            "sehir": "DENIZLI",
-            "ilce": "SARAYKOY",
-            "benzin": 56.07,
-            "motorin": 56.97
+            "benzin": 55.97,
+            "motorin": 56.81
         },
         {
             "sehir": "DIYARBAKIR",
             "ilce": "MERKEZ",
-            "benzin": 56.6,
-            "motorin": 57.48
-        },
-        {
-            "sehir": "DIYARBAKIR",
-            "ilce": "BAGLAR",
-            "benzin": 56.6,
-            "motorin": 57.48
-        },
-        {
-            "sehir": "DIYARBAKIR",
-            "ilce": "BISMIL",
-            "benzin": 56.6,
-            "motorin": 57.48
-        },
-        {
-            "sehir": "DIYARBAKIR",
-            "ilce": "ERGANI",
-            "benzin": 56.6,
-            "motorin": 57.48
-        },
-        {
-            "sehir": "DIYARBAKIR",
-            "ilce": "KAYAPINAR",
-            "benzin": 56.6,
-            "motorin": 57.48
-        },
-        {
-            "sehir": "DIYARBAKIR",
-            "ilce": "SUR",
-            "benzin": 56.6,
-            "motorin": 57.48
+            "benzin": 56.48,
+            "motorin": 57.33
         },
         {
             "sehir": "DUZCE",
             "ilce": "MERKEZ",
-            "benzin": 55.25,
-            "motorin": 55.87
-        },
-        {
-            "sehir": "DUZCE",
-            "ilce": "AKCAKOCA",
-            "benzin": 55.25,
-            "motorin": 55.87
-        },
-        {
-            "sehir": "DUZCE",
-            "ilce": "GUMUSOVA",
-            "benzin": 55.25,
-            "motorin": 55.87
+            "benzin": 55.17,
+            "motorin": 55.81
         },
         {
             "sehir": "EDIRNE",
             "ilce": "MERKEZ",
-            "benzin": 55.45,
-            "motorin": 56.32
-        },
-        {
-            "sehir": "EDIRNE",
-            "ilce": "IPSALA",
-            "benzin": 55.45,
-            "motorin": 56.32
-        },
-        {
-            "sehir": "EDIRNE",
-            "ilce": "KESAN",
-            "benzin": 55.45,
-            "motorin": 56.32
-        },
-        {
-            "sehir": "EDIRNE",
-            "ilce": "UZUNKOPRU",
-            "benzin": 55.45,
-            "motorin": 56.32
+            "benzin": 55.32,
+            "motorin": 56.24
         },
         {
             "sehir": "ELAZIG",
             "ilce": "MERKEZ",
-            "benzin": 56.71,
-            "motorin": 57.59
+            "benzin": 56.62,
+            "motorin": 57.47
         },
         {
             "sehir": "ERZINCAN",
             "ilce": "MERKEZ",
-            "benzin": 56.34,
-            "motorin": 57.18
-        },
-        {
-            "sehir": "ERZINCAN",
-            "ilce": "REFAHIYE",
-            "benzin": 56.34,
-            "motorin": 57.18
+            "benzin": 56.18,
+            "motorin": 57.08
         },
         {
             "sehir": "ERZURUM",
             "ilce": "MERKEZ",
-            "benzin": 56.39,
-            "motorin": 57.25
-        },
-        {
-            "sehir": "ERZURUM",
-            "ilce": "ASKALE",
-            "benzin": 56.39,
-            "motorin": 57.25
-        },
-        {
-            "sehir": "ERZURUM",
-            "ilce": "AZIZIYE",
-            "benzin": 56.39,
-            "motorin": 57.25
-        },
-        {
-            "sehir": "ERZURUM",
-            "ilce": "ISPIR",
-            "benzin": 56.39,
-            "motorin": 57.25
-        },
-        {
-            "sehir": "ERZURUM",
-            "ilce": "OLTU",
-            "benzin": 56.39,
-            "motorin": 57.25
-        },
-        {
-            "sehir": "ERZURUM",
-            "ilce": "PASINLER",
-            "benzin": 56.39,
-            "motorin": 57.25
+            "benzin": 56.2,
+            "motorin": 57.05
         },
         {
             "sehir": "ESKISEHIR",
             "ilce": "MERKEZ",
-            "benzin": 55.62,
-            "motorin": 56.25
-        },
-        {
-            "sehir": "ESKISEHIR",
-            "ilce": "CIFTELER",
-            "benzin": 55.62,
-            "motorin": 56.25
-        },
-        {
-            "sehir": "ESKISEHIR",
-            "ilce": "INONU",
-            "benzin": 55.62,
-            "motorin": 56.25
-        },
-        {
-            "sehir": "ESKISEHIR",
-            "ilce": "ODUNPAZARI",
-            "benzin": 55.62,
-            "motorin": 56.25
-        },
-        {
-            "sehir": "ESKISEHIR",
-            "ilce": "SEYITGAZI",
-            "benzin": 55.62,
-            "motorin": 56.25
-        },
-        {
-            "sehir": "ESKISEHIR",
-            "ilce": "SIVRIHISAR",
-            "benzin": 55.62,
-            "motorin": 56.25
+            "benzin": 55.5,
+            "motorin": 56.22
         },
         {
             "sehir": "GAZIANTEP",
             "ilce": "MERKEZ",
-            "benzin": 56.32,
-            "motorin": 57.15
-        },
-        {
-            "sehir": "GAZIANTEP",
-            "ilce": "NIZIP",
-            "benzin": 56.32,
-            "motorin": 57.15
-        },
-        {
-            "sehir": "GAZIANTEP",
-            "ilce": "OGUZELI",
-            "benzin": 56.32,
-            "motorin": 57.14
+            "benzin": 56.19,
+            "motorin": 57.1
         },
         {
             "sehir": "GIRESUN",
             "ilce": "MERKEZ",
-            "benzin": 56.15,
-            "motorin": 57.0
-        },
-        {
-            "sehir": "GIRESUN",
-            "ilce": "BULANCAK",
-            "benzin": 56.15,
-            "motorin": 57.0
-        },
-        {
-            "sehir": "GIRESUN",
-            "ilce": "TIREBOLU",
-            "benzin": 56.15,
-            "motorin": 57.0
+            "benzin": 56.09,
+            "motorin": 56.86
         },
         {
             "sehir": "GUMUSHANE",
             "ilce": "MERKEZ",
-            "benzin": 56.11,
-            "motorin": 56.93
-        },
-        {
-            "sehir": "GUMUSHANE",
-            "ilce": "TORUL",
-            "benzin": 56.11,
-            "motorin": 56.93
+            "benzin": 56.0,
+            "motorin": 56.8
         },
         {
             "sehir": "HAKKARI",
             "ilce": "MERKEZ",
-            "benzin": 56.76,
-            "motorin": 57.64
-        },
-        {
-            "sehir": "HAKKARI",
-            "ilce": "YUKSEKOVA",
-            "benzin": 56.76,
-            "motorin": 57.64
+            "benzin": 56.57,
+            "motorin": 57.47
         },
         {
             "sehir": "HATAY",
             "ilce": "MERKEZ",
-            "benzin": 56.04,
-            "motorin": 56.89
-        },
-        {
-            "sehir": "HATAY",
-            "ilce": "BELEN",
-            "benzin": 56.04,
-            "motorin": 56.89
-        },
-        {
-            "sehir": "HATAY",
-            "ilce": "DEFNE",
-            "benzin": 56.04,
-            "motorin": 56.89
-        },
-        {
-            "sehir": "HATAY",
-            "ilce": "DORTYOL",
-            "benzin": 56.04,
-            "motorin": 56.89
-        },
-        {
-            "sehir": "HATAY",
-            "ilce": "ERZIN",
-            "benzin": 56.04,
-            "motorin": 56.89
-        },
-        {
-            "sehir": "HATAY",
-            "ilce": "HASSA",
-            "benzin": 56.04,
-            "motorin": 56.89
-        },
-        {
-            "sehir": "HATAY",
-            "ilce": "ISKENDERUN",
-            "benzin": 56.04,
-            "motorin": 56.89
-        },
-        {
-            "sehir": "HATAY",
-            "ilce": "KIRIKHAN",
-            "benzin": 56.04,
-            "motorin": 56.89
-        },
-        {
-            "sehir": "HATAY",
-            "ilce": "SAMANDAG",
-            "benzin": 56.04,
-            "motorin": 56.89
+            "benzin": 55.95,
+            "motorin": 56.8
         },
         {
             "sehir": "IGDIR",
             "ilce": "MERKEZ",
-            "benzin": 56.68,
-            "motorin": 57.5
+            "benzin": 56.49,
+            "motorin": 57.38
         },
         {
             "sehir": "ISPARTA",
             "ilce": "MERKEZ",
-            "benzin": 56.43,
-            "motorin": 57.4
-        },
-        {
-            "sehir": "ISPARTA",
-            "ilce": "EGIRDIR",
-            "benzin": 56.43,
-            "motorin": 57.4
-        },
-        {
-            "sehir": "ISPARTA",
-            "ilce": "GONEN",
-            "benzin": 56.43,
-            "motorin": 57.4
-        },
-        {
-            "sehir": "ISPARTA",
-            "ilce": "KECIBORLU",
-            "benzin": 56.43,
-            "motorin": 57.4
+            "benzin": 56.26,
+            "motorin": 57.25
         },
         {
             "sehir": "ISTANBUL",
-            "ilce": "ARNAVUTKOY",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "ATASEHIR",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "AVCILAR",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "BAGCILAR",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "BAKIRKOY",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "BASAKSEHIR",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "BAYRAMPASA",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "BESIKTAS",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "BEYKOZ",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "BEYLIKDUZU",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "BEYOGLU",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "BOGAZKOY",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "BUYUKCEKMECE",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "CATALCA",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "CEKMEKOY",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "ESENLER",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "ESENYURT",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "EYUP",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "FATIH",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "GAZIOSMANPASA",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "GUNGOREN",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "ISTANBUL_AVR",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "KADIKOY",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "KAGITHANE",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "KARTAL",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "KUCUKCEKMECE",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "MALTEPE",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "PENDIK",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "SANCAKTEPE",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "SARIYER",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "SILE",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "SILIVRI",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "SISLI",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "SULTANBEYLI",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "SULTANGAZI",
-            "benzin": 54.42,
-            "motorin": 55.08
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "TUZLA",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "UMRANIYE",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "USKUDAR",
-            "benzin": 54.28,
-            "motorin": 54.95
-        },
-        {
-            "sehir": "ISTANBUL",
-            "ilce": "ZEYTINBURNU",
-            "benzin": 54.42,
-            "motorin": 55.08
+            "ilce": "ISTANBUL_ANA",
+            "benzin": 54.18,
+            "motorin": 54.85
         },
         {
             "sehir": "IZMIR",
             "ilce": "MERKEZ",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "ALIAGA",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "BAYINDIR",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "BERGAMA",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "BORNOVA",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "BUCA",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "CESME",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "CIGLI",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "DIKILI",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "FOCA",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "GUZELBAHCE",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "KARABAGLAR",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "KARABURUN",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "KARSIYAKA",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "KEMALPASA",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "MENDERES",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "MENEMEN",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "ODEMIS",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "SEFERIHISAR",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "SELCUK",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "TIRE",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "TORBALI",
-            "benzin": 55.65,
-            "motorin": 56.48
-        },
-        {
-            "sehir": "IZMIR",
-            "ilce": "URLA",
-            "benzin": 55.65,
-            "motorin": 56.48
+            "benzin": 55.52,
+            "motorin": 56.35
         },
         {
             "sehir": "K.MARAS",
             "ilce": "MERKEZ",
-            "benzin": 56.3,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "K.MARAS",
-            "ilce": "AFSIN",
-            "benzin": 56.3,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "K.MARAS",
-            "ilce": "ELBISTAN",
-            "benzin": 56.3,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "K.MARAS",
-            "ilce": "GOKSUN",
-            "benzin": 56.3,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "K.MARAS",
-            "ilce": "PAZARCIK",
-            "benzin": 56.3,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "K.MARAS",
-            "ilce": "TURKOGLU",
-            "benzin": 56.3,
-            "motorin": 57.17
+            "benzin": 56.12,
+            "motorin": 57.09
         },
         {
             "sehir": "KARABUK",
             "ilce": "MERKEZ",
-            "benzin": 55.66,
-            "motorin": 56.31
+            "benzin": 55.54,
+            "motorin": 56.25
         },
         {
             "sehir": "KARAMAN",
             "ilce": "MERKEZ",
-            "benzin": 56.23,
-            "motorin": 57.09
+            "benzin": 56.13,
+            "motorin": 56.95
         },
         {
             "sehir": "KARS",
             "ilce": "MERKEZ",
-            "benzin": 56.41,
-            "motorin": 57.23
+            "benzin": 56.3,
+            "motorin": 57.13
         },
         {
             "sehir": "KASTAMONU",
             "ilce": "MERKEZ",
-            "benzin": 56.03,
-            "motorin": 56.84
-        },
-        {
-            "sehir": "KASTAMONU",
-            "ilce": "BOZKURT",
-            "benzin": 56.03,
-            "motorin": 56.84
-        },
-        {
-            "sehir": "KASTAMONU",
-            "ilce": "TOSYA",
-            "benzin": 56.03,
-            "motorin": 56.84
+            "benzin": 56.02,
+            "motorin": 56.79
         },
         {
             "sehir": "KAYSERI",
-            "ilce": "DEVELI",
-            "benzin": 56.33,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "KAYSERI",
-            "ilce": "INCESU",
-            "benzin": 56.33,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "KAYSERI",
-            "ilce": "KOCASINAN",
-            "benzin": 56.33,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "KAYSERI",
-            "ilce": "MELIKGAZI",
-            "benzin": 56.33,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "KAYSERI",
-            "ilce": "PINARBASI",
-            "benzin": 56.33,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "KAYSERI",
-            "ilce": "YAHYALI",
-            "benzin": 56.33,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "KAYSERI",
-            "ilce": "YESILHISAR",
-            "benzin": 56.33,
-            "motorin": 57.17
+            "ilce": "MERKEZ",
+            "benzin": 56.16,
+            "motorin": 57.11
         },
         {
             "sehir": "KILIS",
             "ilce": "MERKEZ",
-            "benzin": 56.03,
-            "motorin": 56.89
+            "benzin": 55.94,
+            "motorin": 56.74
         },
         {
             "sehir": "KIRIKKALE",
-            "ilce": "DELICE",
-            "benzin": 55.58,
-            "motorin": 56.41
-        },
-        {
-            "sehir": "KIRIKKALE",
-            "ilce": "YAHSIHAN",
-            "benzin": 55.58,
-            "motorin": 56.41
+            "ilce": "MERKEZ",
+            "benzin": 55.45,
+            "motorin": 56.35
         },
         {
             "sehir": "KIRKLARELI",
             "ilce": "MERKEZ",
-            "benzin": 55.43,
-            "motorin": 56.28
-        },
-        {
-            "sehir": "KIRKLARELI",
-            "ilce": "LULEBURGAZ",
-            "benzin": 55.43,
-            "motorin": 56.28
-        },
-        {
-            "sehir": "KIRKLARELI",
-            "ilce": "PINARHISAR",
-            "benzin": 55.43,
-            "motorin": 56.28
-        },
-        {
-            "sehir": "KIRKLARELI",
-            "ilce": "VIZE",
-            "benzin": 55.43,
-            "motorin": 56.28
+            "benzin": 55.28,
+            "motorin": 56.29
         },
         {
             "sehir": "KIRSEHIR",
             "ilce": "MERKEZ",
-            "benzin": 55.63,
-            "motorin": 56.46
-        },
-        {
-            "sehir": "KIRSEHIR",
-            "ilce": "MUCUR",
-            "benzin": 55.63,
-            "motorin": 56.46
+            "benzin": 55.54,
+            "motorin": 56.34
         },
         {
             "sehir": "KOCAELI",
             "ilce": "MERKEZ",
-            "benzin": 54.77,
-            "motorin": 55.41
-        },
-        {
-            "sehir": "KOCAELI",
-            "ilce": "BASISKELE",
-            "benzin": 54.77,
-            "motorin": 55.41
-        },
-        {
-            "sehir": "KOCAELI",
-            "ilce": "CAYIROVA",
-            "benzin": 54.77,
-            "motorin": 55.41
-        },
-        {
-            "sehir": "KOCAELI",
-            "ilce": "DARICA",
-            "benzin": 54.77,
-            "motorin": 55.41
-        },
-        {
-            "sehir": "KOCAELI",
-            "ilce": "DERINCE",
-            "benzin": 54.77,
-            "motorin": 55.41
-        },
-        {
-            "sehir": "KOCAELI",
-            "ilce": "GEBZE",
-            "benzin": 54.77,
-            "motorin": 55.41
-        },
-        {
-            "sehir": "KOCAELI",
-            "ilce": "GOLCUK",
-            "benzin": 54.77,
-            "motorin": 55.41
-        },
-        {
-            "sehir": "KOCAELI",
-            "ilce": "IZMIT",
-            "benzin": 54.77,
-            "motorin": 55.41
-        },
-        {
-            "sehir": "KOCAELI",
-            "ilce": "KARAMURSEL",
-            "benzin": 54.77,
-            "motorin": 55.41
-        },
-        {
-            "sehir": "KOCAELI",
-            "ilce": "KARTEPE",
-            "benzin": 54.77,
-            "motorin": 55.41
-        },
-        {
-            "sehir": "KOCAELI",
-            "ilce": "KORFEZ",
-            "benzin": 54.77,
-            "motorin": 55.41
+            "benzin": 54.71,
+            "motorin": 55.36
         },
         {
             "sehir": "KONYA",
-            "ilce": "AKSEHIR",
-            "benzin": 56.37,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "KONYA",
-            "ilce": "BEYSEHIR",
-            "benzin": 56.37,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "KONYA",
-            "ilce": "CIHANBEYLI",
-            "benzin": 56.37,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "KONYA",
-            "ilce": "HADIM",
-            "benzin": 56.37,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "KONYA",
-            "ilce": "KARAPINAR",
-            "benzin": 56.37,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "KONYA",
-            "ilce": "KARATAY",
-            "benzin": 56.37,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "KONYA",
-            "ilce": "KONYAEREGLI",
-            "benzin": 56.37,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "KONYA",
-            "ilce": "KULU",
-            "benzin": 56.37,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "KONYA",
-            "ilce": "MERAM",
-            "benzin": 56.37,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "KONYA",
-            "ilce": "SARAYONU",
-            "benzin": 56.37,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "KONYA",
-            "ilce": "SELCUKLU",
-            "benzin": 56.37,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "KONYA",
-            "ilce": "SEYDISEHIR",
-            "benzin": 56.37,
-            "motorin": 57.36
+            "ilce": "MERKEZ",
+            "benzin": 56.27,
+            "motorin": 57.25
         },
         {
             "sehir": "KUTAHYA",
             "ilce": "MERKEZ",
-            "benzin": 56.29,
-            "motorin": 56.96
-        },
-        {
-            "sehir": "KUTAHYA",
-            "ilce": "GEDIZ",
-            "benzin": 56.29,
-            "motorin": 56.96
-        },
-        {
-            "sehir": "KUTAHYA",
-            "ilce": "SIMAV",
-            "benzin": 56.29,
-            "motorin": 56.96
-        },
-        {
-            "sehir": "KUTAHYA",
-            "ilce": "TAVSANLI",
-            "benzin": 56.29,
-            "motorin": 56.96
+            "benzin": 56.15,
+            "motorin": 56.79
         },
         {
             "sehir": "MALATYA",
             "ilce": "MERKEZ",
-            "benzin": 56.5,
-            "motorin": 57.36
-        },
-        {
-            "sehir": "MALATYA",
-            "ilce": "YESILYURT",
-            "benzin": 56.5,
-            "motorin": 57.36
+            "benzin": 56.38,
+            "motorin": 57.26
         },
         {
             "sehir": "MANISA",
             "ilce": "MERKEZ",
-            "benzin": 55.73,
-            "motorin": 56.55
-        },
-        {
-            "sehir": "MANISA",
-            "ilce": "AHMETLI",
-            "benzin": 55.73,
-            "motorin": 56.55
-        },
-        {
-            "sehir": "MANISA",
-            "ilce": "AKHISAR",
-            "benzin": 55.73,
-            "motorin": 56.55
-        },
-        {
-            "sehir": "MANISA",
-            "ilce": "ALASEHIR",
-            "benzin": 55.73,
-            "motorin": 56.55
-        },
-        {
-            "sehir": "MANISA",
-            "ilce": "GOLMARMARA",
-            "benzin": 55.73,
-            "motorin": 56.55
-        },
-        {
-            "sehir": "MANISA",
-            "ilce": "KIRKAGAC",
-            "benzin": 55.73,
-            "motorin": 56.55
-        },
-        {
-            "sehir": "MANISA",
-            "ilce": "KULA",
-            "benzin": 55.73,
-            "motorin": 56.55
-        },
-        {
-            "sehir": "MANISA",
-            "ilce": "SALIHLI",
-            "benzin": 55.73,
-            "motorin": 56.55
-        },
-        {
-            "sehir": "MANISA",
-            "ilce": "SARIGOL",
-            "benzin": 55.73,
-            "motorin": 56.55
-        },
-        {
-            "sehir": "MANISA",
-            "ilce": "SOMA",
-            "benzin": 55.73,
-            "motorin": 56.55
-        },
-        {
-            "sehir": "MANISA",
-            "ilce": "TURGUTLU",
-            "benzin": 55.73,
-            "motorin": 56.55
+            "benzin": 55.6,
+            "motorin": 56.44
         },
         {
             "sehir": "MARDIN",
             "ilce": "MERKEZ",
-            "benzin": 56.63,
-            "motorin": 57.51
-        },
-        {
-            "sehir": "MARDIN",
-            "ilce": "ARTUKLU",
-            "benzin": 56.63,
-            "motorin": 57.51
-        },
-        {
-            "sehir": "MARDIN",
-            "ilce": "KIZILTEPE",
-            "benzin": 56.63,
-            "motorin": 57.51
-        },
-        {
-            "sehir": "MARDIN",
-            "ilce": "MIDYAT",
-            "benzin": 56.63,
-            "motorin": 57.51
-        },
-        {
-            "sehir": "MARDIN",
-            "ilce": "NUSAYBIN",
-            "benzin": 56.63,
-            "motorin": 57.51
+            "benzin": 56.55,
+            "motorin": 57.41
         },
         {
             "sehir": "MERSIN",
             "ilce": "MERKEZ",
-            "benzin": 56.17,
-            "motorin": 57.0
-        },
-        {
-            "sehir": "MERSIN",
-            "ilce": "AKDENIZ",
-            "benzin": 56.17,
-            "motorin": 57.0
-        },
-        {
-            "sehir": "MERSIN",
-            "ilce": "ANAMUR",
-            "benzin": 56.17,
-            "motorin": 57.0
-        },
-        {
-            "sehir": "MERSIN",
-            "ilce": "BOZYAZI",
-            "benzin": 56.17,
-            "motorin": 57.0
-        },
-        {
-            "sehir": "MERSIN",
-            "ilce": "ERDEMLI",
-            "benzin": 56.17,
-            "motorin": 57.0
-        },
-        {
-            "sehir": "MERSIN",
-            "ilce": "MEZITLI",
-            "benzin": 56.17,
-            "motorin": 57.0
-        },
-        {
-            "sehir": "MERSIN",
-            "ilce": "MUT",
-            "benzin": 56.17,
-            "motorin": 57.0
-        },
-        {
-            "sehir": "MERSIN",
-            "ilce": "SILIFKE",
-            "benzin": 56.17,
-            "motorin": 57.0
-        },
-        {
-            "sehir": "MERSIN",
-            "ilce": "TARSUS",
-            "benzin": 56.17,
-            "motorin": 57.0
-        },
-        {
-            "sehir": "MERSIN",
-            "ilce": "YENISEHIR",
-            "benzin": 56.17,
-            "motorin": 57.0
+            "benzin": 56.04,
+            "motorin": 56.91
         },
         {
             "sehir": "MUGLA",
             "ilce": "MERKEZ",
-            "benzin": 56.09,
-            "motorin": 56.97
-        },
-        {
-            "sehir": "MUGLA",
-            "ilce": "BODRUM",
-            "benzin": 56.09,
-            "motorin": 56.97
-        },
-        {
-            "sehir": "MUGLA",
-            "ilce": "DALAMAN",
-            "benzin": 56.22,
-            "motorin": 57.1
-        },
-        {
-            "sehir": "MUGLA",
-            "ilce": "FETHIYE",
-            "benzin": 56.34,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "MUGLA",
-            "ilce": "MARMARIS",
-            "benzin": 56.09,
-            "motorin": 56.97
-        },
-        {
-            "sehir": "MUGLA",
-            "ilce": "MENTESE",
-            "benzin": 56.09,
-            "motorin": 56.97
-        },
-        {
-            "sehir": "MUGLA",
-            "ilce": "MILAS",
-            "benzin": 56.09,
-            "motorin": 56.97
-        },
-        {
-            "sehir": "MUGLA",
-            "ilce": "ORTACA",
-            "benzin": 56.22,
-            "motorin": 57.1
-        },
-        {
-            "sehir": "MUGLA",
-            "ilce": "SEYDIKEMER",
-            "benzin": 56.34,
-            "motorin": 57.17
-        },
-        {
-            "sehir": "MUGLA",
-            "ilce": "ULA",
-            "benzin": 56.09,
-            "motorin": 56.97
-        },
-        {
-            "sehir": "MUGLA",
-            "ilce": "YATAGAN",
-            "benzin": 56.09,
-            "motorin": 56.97
+            "benzin": 56.02,
+            "motorin": 56.82
         },
         {
             "sehir": "MUS",
             "ilce": "MERKEZ",
-            "benzin": 56.66,
-            "motorin": 57.54
+            "benzin": 56.5,
+            "motorin": 57.45
         },
         {
             "sehir": "NEVSEHIR",
             "ilce": "MERKEZ",
-            "benzin": 56.24,
-            "motorin": 57.09
-        },
-        {
-            "sehir": "NEVSEHIR",
-            "ilce": "ACIGOL",
-            "benzin": 56.24,
-            "motorin": 57.09
-        },
-        {
-            "sehir": "NEVSEHIR",
-            "ilce": "GULSEHIR",
-            "benzin": 56.24,
-            "motorin": 57.09
-        },
-        {
-            "sehir": "NEVSEHIR",
-            "ilce": "KOZAKLI",
-            "benzin": 56.24,
-            "motorin": 57.09
+            "benzin": 56.13,
+            "motorin": 57.12
         },
         {
             "sehir": "NIGDE",
             "ilce": "MERKEZ",
-            "benzin": 56.17,
-            "motorin": 57.01
-        },
-        {
-            "sehir": "NIGDE",
-            "ilce": "BOR",
-            "benzin": 56.17,
-            "motorin": 57.01
+            "benzin": 56.01,
+            "motorin": 56.95
         },
         {
             "sehir": "ORDU",
             "ilce": "MERKEZ",
-            "benzin": 55.94,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "ORDU",
-            "ilce": "ALTINORDU",
-            "benzin": 55.94,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "ORDU",
-            "ilce": "FATSA",
-            "benzin": 55.94,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "ORDU",
-            "ilce": "UNYE",
-            "benzin": 55.94,
-            "motorin": 56.74
+            "benzin": 55.84,
+            "motorin": 56.71
         },
         {
             "sehir": "OSMANIYE",
             "ilce": "MERKEZ",
-            "benzin": 56.02,
-            "motorin": 56.87
-        },
-        {
-            "sehir": "OSMANIYE",
-            "ilce": "KADIRLI",
-            "benzin": 56.02,
-            "motorin": 56.87
-        },
-        {
-            "sehir": "OSMANIYE",
-            "ilce": "TOPRAKKALE",
-            "benzin": 56.02,
-            "motorin": 56.87
+            "benzin": 55.92,
+            "motorin": 56.75
         },
         {
             "sehir": "RIZE",
-            "ilce": "ARDESEN",
-            "benzin": 56.09,
-            "motorin": 56.91
-        },
-        {
-            "sehir": "RIZE",
-            "ilce": "CAMLIHEMSIN",
-            "benzin": 56.09,
-            "motorin": 56.91
-        },
-        {
-            "sehir": "RIZE",
-            "ilce": "CAYELI",
-            "benzin": 56.09,
-            "motorin": 56.91
-        },
-        {
-            "sehir": "RIZE",
-            "ilce": "IYIDERE",
-            "benzin": 56.09,
-            "motorin": 56.91
+            "ilce": "MERKEZ",
+            "benzin": 55.91,
+            "motorin": 56.8
         },
         {
             "sehir": "SAKARYA",
-            "ilce": "ADAPAZARI",
-            "benzin": 55.09,
-            "motorin": 55.71
-        },
-        {
-            "sehir": "SAKARYA",
-            "ilce": "AKYAZI",
-            "benzin": 55.09,
-            "motorin": 55.71
-        },
-        {
-            "sehir": "SAKARYA",
-            "ilce": "ARIFIYE",
-            "benzin": 55.09,
-            "motorin": 55.71
-        },
-        {
-            "sehir": "SAKARYA",
-            "ilce": "ERENLER",
-            "benzin": 55.09,
-            "motorin": 55.71
-        },
-        {
-            "sehir": "SAKARYA",
-            "ilce": "FERIZLI",
-            "benzin": 55.09,
-            "motorin": 55.71
-        },
-        {
-            "sehir": "SAKARYA",
-            "ilce": "GEYVE",
-            "benzin": 55.09,
-            "motorin": 55.71
-        },
-        {
-            "sehir": "SAKARYA",
-            "ilce": "HENDEK",
-            "benzin": 55.09,
-            "motorin": 55.71
-        },
-        {
-            "sehir": "SAKARYA",
-            "ilce": "KARASU",
-            "benzin": 55.09,
-            "motorin": 55.71
-        },
-        {
-            "sehir": "SAKARYA",
-            "ilce": "SERDIVAN",
-            "benzin": 55.09,
-            "motorin": 55.71
-        },
-        {
-            "sehir": "SAKARYA",
-            "ilce": "SOGUTLU",
-            "benzin": 55.09,
-            "motorin": 55.71
+            "ilce": "MERKEZ",
+            "benzin": 55.02,
+            "motorin": 55.66
         },
         {
             "sehir": "SAMSUN",
             "ilce": "MERKEZ",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "SAMSUN",
-            "ilce": "ALACAM",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "SAMSUN",
-            "ilce": "ATAKUM",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "SAMSUN",
-            "ilce": "BAFRA",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "SAMSUN",
-            "ilce": "CARSAMBA",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "SAMSUN",
-            "ilce": "HAVZA",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "SAMSUN",
-            "ilce": "ILKADIM",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "SAMSUN",
-            "ilce": "KAVAK",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "SAMSUN",
-            "ilce": "ONDOKUZMAYIS",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "SAMSUN",
-            "ilce": "TEKKEKOY",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "SAMSUN",
-            "ilce": "TERME",
-            "benzin": 55.92,
-            "motorin": 56.74
-        },
-        {
-            "sehir": "SAMSUN",
-            "ilce": "VEZIRKOPRU",
-            "benzin": 55.92,
-            "motorin": 56.74
+            "benzin": 55.85,
+            "motorin": 56.66
         },
         {
             "sehir": "SANLIURFA",
             "ilce": "MERKEZ",
-            "benzin": 56.49,
-            "motorin": 57.34
-        },
-        {
-            "sehir": "SANLIURFA",
-            "ilce": "HILVAN",
-            "benzin": 56.49,
-            "motorin": 57.34
-        },
-        {
-            "sehir": "SANLIURFA",
-            "ilce": "KARAKOPRU",
-            "benzin": 56.49,
-            "motorin": 57.34
-        },
-        {
-            "sehir": "SANLIURFA",
-            "ilce": "SIVEREK",
-            "benzin": 56.49,
-            "motorin": 57.34
-        },
-        {
-            "sehir": "SANLIURFA",
-            "ilce": "VIRANSEHIR",
-            "benzin": 56.49,
-            "motorin": 57.34
+            "benzin": 56.41,
+            "motorin": 57.22
         },
         {
             "sehir": "SIIRT",
             "ilce": "MERKEZ",
-            "benzin": 56.65,
-            "motorin": 57.51
+            "benzin": 56.51,
+            "motorin": 57.42
         },
         {
             "sehir": "SINOP",
             "ilce": "MERKEZ",
-            "benzin": 55.97,
-            "motorin": 56.8
+            "benzin": 55.9,
+            "motorin": 56.72
         },
         {
-            "sehir": "SINOP",
-            "ilce": "BOYABAT",
-            "benzin": 55.97,
-            "motorin": 56.8
+            "sehir": "SIRNAK",
+            "ilce": "MERKEZ",
+            "benzin": 56.58,
+            "motorin": 57.46
         },
         {
             "sehir": "SIVAS",
             "ilce": "MERKEZ",
-            "benzin": 56.3,
-            "motorin": 57.11
-        },
-        {
-            "sehir": "SIVAS",
-            "ilce": "GEMEREK",
-            "benzin": 56.3,
-            "motorin": 57.11
-        },
-        {
-            "sehir": "SIVAS",
-            "ilce": "GURUN",
-            "benzin": 56.3,
-            "motorin": 57.11
-        },
-        {
-            "sehir": "SIVAS",
-            "ilce": "SARKISLA",
-            "benzin": 56.3,
-            "motorin": 57.11
-        },
-        {
-            "sehir": "SIVAS",
-            "ilce": "SUSEHRI",
-            "benzin": 56.3,
-            "motorin": 57.11
-        },
-        {
-            "sehir": "SIVAS",
-            "ilce": "ZARA",
-            "benzin": 56.3,
-            "motorin": 57.11
+            "benzin": 56.17,
+            "motorin": 57.02
         },
         {
             "sehir": "TEKIRDAG",
             "ilce": "MERKEZ",
-            "benzin": 55.04,
-            "motorin": 55.89
-        },
-        {
-            "sehir": "TEKIRDAG",
-            "ilce": "CERKEZKOY",
-            "benzin": 55.04,
-            "motorin": 55.89
-        },
-        {
-            "sehir": "TEKIRDAG",
-            "ilce": "CORLU",
-            "benzin": 55.04,
-            "motorin": 55.89
-        },
-        {
-            "sehir": "TEKIRDAG",
-            "ilce": "ERGENE",
-            "benzin": 55.04,
-            "motorin": 55.89
-        },
-        {
-            "sehir": "TEKIRDAG",
-            "ilce": "MARMARAEREGLISI",
-            "benzin": 55.04,
-            "motorin": 55.89
-        },
-        {
-            "sehir": "TEKIRDAG",
-            "ilce": "MURATLI",
-            "benzin": 55.04,
-            "motorin": 55.89
-        },
-        {
-            "sehir": "TEKIRDAG",
-            "ilce": "SARAY",
-            "benzin": 55.04,
-            "motorin": 55.89
-        },
-        {
-            "sehir": "TEKIRDAG",
-            "ilce": "SARKOY",
-            "benzin": 55.04,
-            "motorin": 55.89
+            "benzin": 55.03,
+            "motorin": 55.9
         },
         {
             "sehir": "TOKAT",
             "ilce": "MERKEZ",
-            "benzin": 55.98,
-            "motorin": 56.79
-        },
-        {
-            "sehir": "TOKAT",
-            "ilce": "ERBAA",
-            "benzin": 55.98,
-            "motorin": 56.79
-        },
-        {
-            "sehir": "TOKAT",
-            "ilce": "NIKSAR",
-            "benzin": 55.98,
-            "motorin": 56.79
-        },
-        {
-            "sehir": "TOKAT",
-            "ilce": "TURHAL",
-            "benzin": 55.98,
-            "motorin": 56.79
-        },
-        {
-            "sehir": "TOKAT",
-            "ilce": "ZILE",
-            "benzin": 55.98,
-            "motorin": 56.79
+            "benzin": 55.88,
+            "motorin": 56.73
         },
         {
             "sehir": "TRABZON",
             "ilce": "MERKEZ",
-            "benzin": 56.08,
-            "motorin": 56.91
-        },
-        {
-            "sehir": "TRABZON",
-            "ilce": "ARAKLI",
-            "benzin": 56.08,
-            "motorin": 56.91
-        },
-        {
-            "sehir": "TRABZON",
-            "ilce": "ARSIN",
-            "benzin": 56.08,
-            "motorin": 56.91
-        },
-        {
-            "sehir": "TRABZON",
-            "ilce": "BESIKDUZU",
-            "benzin": 56.08,
-            "motorin": 56.91
-        },
-        {
-            "sehir": "TRABZON",
-            "ilce": "OF",
-            "benzin": 56.08,
-            "motorin": 56.91
-        },
-        {
-            "sehir": "TRABZON",
-            "ilce": "ORTAHISAR",
-            "benzin": 56.08,
-            "motorin": 56.91
+            "benzin": 55.9,
+            "motorin": 56.78
         },
         {
             "sehir": "TUNCELI",
             "ilce": "MERKEZ",
-            "benzin": 56.64,
-            "motorin": 57.52
+            "benzin": 56.46,
+            "motorin": 57.42
         },
         {
             "sehir": "USAK",
             "ilce": "MERKEZ",
-            "benzin": 56.11,
-            "motorin": 56.94
-        },
-        {
-            "sehir": "USAK",
-            "ilce": "BANAZ",
-            "benzin": 56.11,
-            "motorin": 56.94
-        },
-        {
-            "sehir": "USAK",
-            "ilce": "ULUBEY",
-            "benzin": 56.11,
-            "motorin": 56.94
+            "benzin": 55.99,
+            "motorin": 56.81
         },
         {
             "sehir": "VAN",
             "ilce": "MERKEZ",
-            "benzin": 56.72,
-            "motorin": 57.53
-        },
-        {
-            "sehir": "VAN",
-            "ilce": "ERCIS",
-            "benzin": 56.72,
-            "motorin": 57.53
-        },
-        {
-            "sehir": "VAN",
-            "ilce": "IPEKYOLU",
-            "benzin": 56.72,
-            "motorin": 57.53
-        },
-        {
-            "sehir": "VAN",
-            "ilce": "TUSBA",
-            "benzin": 56.72,
-            "motorin": 57.53
+            "benzin": 56.58,
+            "motorin": 57.46
         },
         {
             "sehir": "YALOVA",
             "ilce": "MERKEZ",
-            "benzin": 55.09,
-            "motorin": 55.72
-        },
-        {
-            "sehir": "YALOVA",
-            "ilce": "ARMUTLU",
-            "benzin": 55.09,
-            "motorin": 55.72
-        },
-        {
-            "sehir": "YALOVA",
-            "ilce": "CIFTLIKKOY",
-            "benzin": 55.09,
-            "motorin": 55.72
+            "benzin": 54.94,
+            "motorin": 55.68
         },
         {
             "sehir": "YOZGAT",
             "ilce": "MERKEZ",
-            "benzin": 55.97,
-            "motorin": 56.79
-        },
-        {
-            "sehir": "YOZGAT",
-            "ilce": "BOGAZLIYAN",
-            "benzin": 55.97,
-            "motorin": 56.79
-        },
-        {
-            "sehir": "YOZGAT",
-            "ilce": "SARIKAYA",
-            "benzin": 55.97,
-            "motorin": 56.79
-        },
-        {
-            "sehir": "YOZGAT",
-            "ilce": "SORGUN",
-            "benzin": 55.97,
-            "motorin": 56.79
-        },
-        {
-            "sehir": "YOZGAT",
-            "ilce": "YERKOY",
-            "benzin": 55.97,
-            "motorin": 56.79
+            "benzin": 55.81,
+            "motorin": 56.68
         },
         {
             "sehir": "ZONGULDAK",
             "ilce": "MERKEZ",
-            "benzin": 55.6,
-            "motorin": 56.23
-        },
-        {
-            "sehir": "ZONGULDAK",
-            "ilce": "ALAPLI",
-            "benzin": 55.6,
-            "motorin": 56.23
-        },
-        {
-            "sehir": "ZONGULDAK",
-            "ilce": "CAYCUMA",
-            "benzin": 55.6,
-            "motorin": 56.23
-        },
-        {
-            "sehir": "ZONGULDAK",
-            "ilce": "DEVREK",
-            "benzin": 55.6,
-            "motorin": 56.23
-        },
-        {
-            "sehir": "ZONGULDAK",
-            "ilce": "KARAD.EREGLI",
-            "benzin": 55.6,
-            "motorin": 56.23
+            "benzin": 55.41,
+            "motorin": 56.2
         }
     ]
 }
