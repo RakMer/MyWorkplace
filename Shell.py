@@ -49,6 +49,7 @@ try:
     # --- ADIM 2: DÖNGÜ (HER ŞEHİR İÇİN SAYFA YENİLEME) ---
     for i, sehir in enumerate(sehirler):
         try:
+            driver.get(URL)
             sehir_adi = sehir['ad']
             # Dikkat: Sayfa yenilenince ID'ler değişmiyor ama elementler bayatlıyor.
             # ID'yi listeden aldığımız gibi kullanabiliriz çünkü Shell ID'leri sabit (LBI0T0, LBI1T0...)
@@ -58,14 +59,12 @@ try:
 
             # A. SAYFAYI YENİLE (Garanti temizlik)
             # Adana bittikten sonra sayfa durumu bozuluyor, o yüzden her seferinde taze sayfa açıyoruz.
-            if i >= 0: # İlk şehirde zaten açığız, sonrakilerde yenile
-                driver.get(URL)
-                time.sleep(1) # Sayfanın oturmasını bekle
+
 
             # B. Dropdown'ı Tekrar Bul ve Aç
             dropdown_ok = wait.until(EC.visibility_of_element_located((By.ID, "cb_all_cb_province_B-1")))
             actions.move_to_element(dropdown_ok).click().perform()
-            time.sleep(1.5) # Menü açılma süresi
+            time.sleep(0.5) # Menü açılma süresi
 
             # C. Şehri Bul ve Tıkla
             # Sayfa yenilendiği için elementi tekrar bulmalıyız
@@ -79,14 +78,14 @@ try:
             # D. Yükleniyor Panelini Bekle
             try:
                 # Panel görünene kadar bekle (kısa)
-                WebDriverWait(driver, 3).until(EC.visibility_of_element_located((By.ID, "cb_all_grdPrices_LP")))
+                WebDriverWait(driver, 1).until(EC.visibility_of_element_located((By.ID, "cb_all_grdPrices_LP")))
                 # Panel kaybolana kadar bekle (uzun)
                 WebDriverWait(driver, 15).until(EC.invisibility_of_element_located((By.ID, "cb_all_grdPrices_LP")))
             except:
                 time.sleep(1) # Manuel bekleme
 
             # E. Veriyi Çek
-            #soup = BeautifulSoup(driver.page_source, "html.parser")
+            soup = BeautifulSoup(driver.page_source, "html.parser")
             tablo = soup.find("table", id="cb_all_grdPrices_DXMainTable")
             
             if tablo:
