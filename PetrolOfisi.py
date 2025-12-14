@@ -62,7 +62,7 @@ try:
             "veriler": sehir_list
         }
         
-        with open("petrol_ofisi_fiyatlari.json", "w", encoding="utf-8") as f:
+        with open("flutter_akaryakit/assets/petrol_ofisi_fiyatlari.json", "w", encoding="utf-8") as f:
             json.dump(final_veri, f, ensure_ascii=False, indent=4)
         print("\n💾 Veriler kaydedildi.")
 

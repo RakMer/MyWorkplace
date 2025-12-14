@@ -72,7 +72,7 @@ try:
         }
 
         # Dosyayı kaydet
-        with open("opet_fiyatlari.json", "w", encoding="utf-8") as f:
+        with open("flutter_akaryakit/assets/opet_fiyatlari.json", "w", encoding="utf-8") as f:
             json.dump(final_veri, f, ensure_ascii=False, indent=4)
             
         print("-" * 50)

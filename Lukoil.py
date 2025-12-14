@@ -105,7 +105,7 @@ try:
         "veriler": tum_veriler
     }
     
-    with open("shell_fiyatlari.json", "w", encoding="utf-8") as f:
+    with open("flutter_akaryakit/assets/lukoil_fiyatlari.json", "w", encoding="utf-8") as f:
         json.dump(final_veri, f, ensure_ascii=False, indent=4)
         
     print(f"💾 İşlem bitti! 'lukoil_fiyatlari.json' dosyasına bakabilirsin.")

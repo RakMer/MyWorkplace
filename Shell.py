@@ -123,7 +123,7 @@ try:
         "veriler": tum_veriler
     }
     
-    with open(DOSYA_ADI, "w", encoding="utf-8") as f:
+    with open(f"flutter_akaryakit/assets/{DOSYA_ADI}", "w", encoding="utf-8") as f:
         json.dump(final_veri, f, ensure_ascii=False, indent=4)
         
     print(f"💾 İŞLEM TAMAMLANDI! {len(tum_veriler)} kayıt kaydedildi.")

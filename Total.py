@@ -84,7 +84,7 @@ if len(tum_veriler) > 0:
         "veriler": tum_veriler
     }
     
-    with open("total_fiyatlari.json", "w", encoding="utf-8") as f:
+    with open("flutter_akaryakit/assets/total_fiyatlari.json", "w", encoding="utf-8") as f:
         json.dump(final_veri, f, ensure_ascii=False, indent=4)
         
     print(f"💾 İŞLEM TAMAMLANDI! {len(tum_veriler)} satır veri kaydedildi.")
