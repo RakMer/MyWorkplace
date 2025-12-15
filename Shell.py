@@ -8,6 +8,63 @@ import time
 import json
 from datetime import datetime
 
+# Şehir normalizasyon fonksiyonu
+def sehir_normalize(sehir_adi):
+    """Web sitesinden alınan şehir adını uygulamanın beklediği formata çevirir."""
+    normalize_map = {
+        "AFYON": "AFYONKARAHİSAR",
+        "AGRI": "AĞRI",
+        "ISTANBUL": "İSTANBUL",
+        "IZMIR": "İZMİR",
+        "K.MARAS": "KAHRAMANMARAŞ",
+        "SANLIURFA": "ŞANLIURFA",
+        "SIRNAK": "ŞIRNAK",
+        "IGDIR": "IĞDIR",
+        "CANAKKALE": "ÇANAKKALE",
+        "CANKIRI": "ÇANKIRI",
+        "CORUM": "ÇORUM",
+        "DENIZLI": "DENİZLİ",
+        "DIYARBAKIR": "DİYARBAKIR",
+        "DUZCE": "DÜZCE",
+        "EDIRNE": "EDİRNE",
+        "ELAZIG": "ELAZIĞ",
+        "ERZINCAN": "ERZİNCAN",
+        "ESKISEHIR": "ESKİŞEHİR",
+        "GAZIANTEP": "GAZİANTEP",
+        "GIRESUN": "GİRESUN",
+        "GUMUSHANE": "GÜMÜŞHANE",
+        "HAKKARI": "HAKKARİ",
+        "KIRKLARELI": "KIRKLARELİ",
+        "KIRSEHIR": "KIRŞEHİR",
+        "KILIS": "KİLİS",
+        "KOCAELI": "KOCAELİ",
+        "KUTAHYA": "KÜTAHYA",
+        "MANISA": "MANİSA",
+        "MARDIN": "MARDİN",
+        "MERSIN": "MERSİN",
+        "MUGLA": "MUĞLA",
+        "MUS": "MUŞ",
+        "NEVSEHIR": "NEVŞEHİR",
+        "NIGDE": "NİĞDE",
+        "OSMANIYE": "OSMANİYE",
+        "RIZE": "RİZE",
+        "SIIRT": "SİİRT",
+        "SINOP": "SİNOP",
+        "SIVAS": "SİVAS",
+        "TEKIRDAG": "TEKİRDAĞ",
+        "TUNCELI": "TUNCELİ",
+        "USAK": "UŞAK",
+        "ARTVIN": "ARTVİN",
+        "BALIKESIR": "BALIKESİR",
+        "BILECIK": "BİLECİK",
+        "BINGOL": "BİNGÖL",
+        "BITLIS": "BİTLİS",
+        "KARABUK": "KARABÜK",
+        "KAYSERI": "KAYSERİ"
+    }
+    sehir_upper = sehir_adi.upper().strip()
+    return normalize_map.get(sehir_upper, sehir_upper)
+
 # --- AYARLAR ---
 URL = "https://www.turkiyeshell.com/pompatest/"
 DOSYA_ADI = "shell_fiyatlari.json"
@@ -99,8 +156,11 @@ try:
                         motorin = cols[2].text.strip().replace(',', '.')
                         
                         if any(c.isdigit() for c in benzin):
+                            # Şehir adını normalize et
+                            sehir_normalized = sehir_normalize(sehir_adi)
+                            
                             tum_veriler.append({
-                                "sehir": sehir_adi,
+                                "sehir": sehir_normalized,
                                 "ilce": ilce,
                                 "benzin": float(benzin),
                                 "motorin": float(motorin)

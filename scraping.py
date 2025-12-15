@@ -28,7 +28,7 @@ def run_script(script_name):
             [sys.executable, script_name],
             capture_output=True,
             text=True,
-            timeout=300  # 5 dakika timeout
+            timeout=None # 5 dakika timeout
         )
         
         # Çıktıyı göster
@@ -45,9 +45,6 @@ def run_script(script_name):
             print(f"❌ {script_name} hata ile sonlandı! (Exit code: {result.returncode})")
             return False
             
-    except subprocess.TimeoutExpired:
-        print(f"⏱️ {script_name} zaman aşımına uğradı (5 dakika)!")
-        return False
     except Exception as e:
         print(f"❌ {script_name} çalıştırılırken hata: {e}")
         return False

@@ -4,6 +4,65 @@ import time
 import json
 from datetime import datetime
 
+# Şehir normalizasyon fonksiyonu
+def sehir_normalize(sehir_adi):
+    """Web sitesinden alınan şehir adını uygulamanın beklediği formata çevirir."""
+    normalize_map = {
+        "AFYON": "AFYONKARAHİSAR",
+        "AGRI": "AĞRI",
+        "ISTANBUL (ANADOLU)": "İSTANBUL ANADOLU",
+        "ISTANBUL (AVRUPA)": "İSTANBUL AVRUPA",
+        "ISTANBUL": "İSTANBUL",
+        "IZMIR": "İZMİR",
+        "K.MARAS": "KAHRAMANMARAŞ",
+        "SANLIURFA": "ŞANLIURFA",
+        "SIRNAK": "ŞIRNAK",
+        "IGDIR": "IĞDIR",
+        "CANAKKALE": "ÇANAKKALE",
+        "CANKIRI": "ÇANKIRI",
+        "CORUM": "ÇORUM",
+        "DENIZLI": "DENİZLİ",
+        "DIYARBAKIR": "DİYARBAKIR",
+        "DUZCE": "DÜZCE",
+        "EDIRNE": "EDİRNE",
+        "ELAZIG": "ELAZIĞ",
+        "ERZINCAN": "ERZİNCAN",
+        "ESKISEHIR": "ESKİŞEHİR",
+        "GAZIANTEP": "GAZİANTEP",
+        "GIRESUN": "GİRESUN",
+        "GUMUSHANE": "GÜMÜŞHANE",
+        "HAKKARI": "HAKKARİ",
+        "KIRKLARELI": "KIRKLARELİ",
+        "KIRSEHIR": "KIRŞEHİR",
+        "KILIS": "KİLİS",
+        "KOCAELI": "KOCAELİ",
+        "KUTAHYA": "KÜTAHYA",
+        "MANISA": "MANİSA",
+        "MARDIN": "MARDİN",
+        "MERSIN": "MERSİN",
+        "MUGLA": "MUĞLA",
+        "MUS": "MUŞ",
+        "NEVSEHIR": "NEVŞEHİR",
+        "NIGDE": "NİĞDE",
+        "OSMANIYE": "OSMANİYE",
+        "RIZE": "RİZE",
+        "SIIRT": "SİİRT",
+        "SINOP": "SİNOP",
+        "SIVAS": "SİVAS",
+        "TEKIRDAG": "TEKİRDAĞ",
+        "TUNCELI": "TUNCELİ",
+        "USAK": "UŞAK",
+        "ARTVIN": "ARTVİN",
+        "BALIKESIR": "BALIKESİR",
+        "BILECIK": "BİLECİK",
+        "BINGOL": "BİNGÖL",
+        "BITLIS": "BİTLİS",
+        "KARABUK": "KARABÜK",
+        "KAYSERI": "KAYSERİ"
+    }
+    sehir_upper = sehir_adi.upper().strip()
+    return normalize_map.get(sehir_upper, sehir_upper)
+
 print("1. Safari tarayıcı başlatılıyor...")
 driver = webdriver.Safari()
 driver.maximize_window()
@@ -44,12 +103,15 @@ try:
                 motorin_span = sutunlar[2].find("span", class_="with-tax")
                 motorin = motorin_span.text.strip() if motorin_span else "0"
 
+                # Şehir adını normalize et
+                sehir_normalized = sehir_normalize(sehir)
+                
                 # Ekrana yazdır
-                print(f"{sehir:<20} | {benzin:<10} | {motorin:<10}")
+                print(f"{sehir_normalized:<20} | {benzin:<10} | {motorin:<10}")
                 
                 # Listeye ekle
                 sehir_list.append({
-                    "sehir": sehir,
+                    "sehir": sehir_normalized,
                     "benzin": float(benzin),
                     "motorin": float(motorin)
                 })
