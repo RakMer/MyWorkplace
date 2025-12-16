@@ -14,8 +14,30 @@ class AkaryakitApp extends StatelessWidget {
     return MaterialApp(
       title: 'Akaryakıt Fiyatları',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF6366F1),
+          brightness: Brightness.light,
+        ),
         useMaterial3: true,
+        fontFamily: 'SF Pro Display',
+        cardTheme: CardThemeData(
+          elevation: 0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+        ),
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+          elevation: 0,
+        ),
+      ),
+      darkTheme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF6366F1),
+          brightness: Brightness.dark,
+        ),
+        useMaterial3: true,
+        fontFamily: 'SF Pro Display',
       ),
       home: const HomeScreen(),
       debugShowCheckedModeBanner: false,
@@ -107,14 +129,14 @@ class FuelDataService {
       'TP': 'tp_fiatlari.json',
     };
 
-    // Logo URL'leri
+    // Logo dosyaları
     Map<String, String> logos = {
-      'Opet': 'https://logo.clearbit.com/opet.com.tr',
-      'Petrol Ofisi': 'https://logo.clearbit.com/po.com.tr',
-      'Shell': 'https://logo.clearbit.com/shell.com',
-      'Total': 'https://logo.clearbit.com/totalenergies.com',
-      'Lukoil': 'https://logo.clearbit.com/lukoil.com',
-      'TP': 'https://logo.clearbit.com/tppd.com.tr',
+      'Opet': 'assets/logos/OpetLogo.jpg',
+      'Petrol Ofisi': 'assets/logos/PetrolOfisiLogo.png',
+      'Shell': 'assets/logos/ShellLogo.png',
+      'Total': 'assets/logos/TotalLogo.png',
+      'Lukoil': 'assets/logos/LukoilLogo.svg.png',
+      'TP': 'assets/logos/TPLogo.png',
     };
 
     for (var entry in companyFiles.entries) {
@@ -234,58 +256,159 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Akaryakıt Fiyatları'),
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.refresh),
-              onPressed: _loadData,
-            ),
-          ],
-          bottom: const TabBar(
-            tabs: [
-              Tab(text: 'Benzin', icon: Icon(Icons.local_gas_station)),
-              Tab(text: 'Motorin', icon: Icon(Icons.local_shipping)),
-            ],
-          ),
-        ),
-        body: Column(
-          children: [
-            // Şehir Seçici
-            InkWell(
-              onTap: _changeCity,
-              child: Container(
-                width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                color: Colors.blue.shade50,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(Icons.location_on, color: Colors.blue, size: 24),
-                    const SizedBox(width: 8),
-                    Text(
-                      selectedCity,
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blue,
-                      ),
+        backgroundColor: colorScheme.surface,
+        body: CustomScrollView(
+          slivers: [
+            // Modern App Bar
+            SliverAppBar(
+              expandedHeight: 200,
+              floating: false,
+              pinned: true,
+              flexibleSpace: FlexibleSpaceBar(
+                background: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        colorScheme.primary,
+                        colorScheme.primary.withOpacity(0.7),
+                        colorScheme.secondary,
+                      ],
                     ),
-                    const SizedBox(width: 8),
-                    const Icon(Icons.arrow_drop_down, color: Colors.blue),
+                  ),
+                  child: SafeArea(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const SizedBox(height: 20),
+                        const Icon(
+                          Icons.local_gas_station_rounded,
+                          size: 48,
+                          color: Colors.white,
+                        ),
+                        const SizedBox(height: 8),
+                        const Text(
+                          'Akaryakıt Fiyatları',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        // Şehir Seçici
+                        GestureDetector(
+                          onTap: _changeCity,
+                          child: Container(
+                            margin: const EdgeInsets.symmetric(horizontal: 24),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 20,
+                              vertical: 12,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(30),
+                              border: Border.all(
+                                color: Colors.white.withOpacity(0.3),
+                                width: 1,
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const Icon(
+                                  Icons.location_on_rounded,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                                const SizedBox(width: 8),
+                                Text(
+                                  selectedCity,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                const SizedBox(width: 8),
+                                const Icon(
+                                  Icons.keyboard_arrow_down_rounded,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                title: const Text(''),
+              ),
+              actions: [
+                IconButton(
+                  icon: const Icon(Icons.refresh_rounded),
+                  onPressed: _loadData,
+                  tooltip: 'Yenile',
+                ),
+              ],
+            ),
+            
+            // Tab Bar
+            SliverPersistentHeader(
+              pinned: true,
+              delegate: _StickyTabBarDelegate(
+                TabBar(
+                  indicatorSize: TabBarIndicatorSize.label,
+                  indicatorWeight: 3,
+                  indicatorColor: colorScheme.primary,
+                  labelColor: colorScheme.primary,
+                  unselectedLabelColor: colorScheme.onSurface.withOpacity(0.6),
+                  labelStyle: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  tabs: const [
+                    Tab(
+                      icon: Icon(Icons.local_gas_station_rounded),
+                      text: 'Benzin',
+                    ),
+                    Tab(
+                      icon: Icon(Icons.local_shipping_rounded),
+                      text: 'Motorin',
+                    ),
                   ],
                 ),
               ),
             ),
             
-            // İçerik
-            Expanded(
+            // Content
+            SliverFillRemaining(
               child: isLoading
-                  ? const Center(child: CircularProgressIndicator())
+                  ? Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CircularProgressIndicator(
+                            color: colorScheme.primary,
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            'Fiyatlar yükleniyor...',
+                            style: TextStyle(
+                              color: colorScheme.onSurface.withOpacity(0.6),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
                   : TabBarView(
                       children: [
                         _buildFuelList(fuelPrices, isGasoline: true),
@@ -300,9 +423,28 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildFuelList(List<FuelPrice> prices, {required bool isGasoline}) {
+    final colorScheme = Theme.of(context).colorScheme;
+    
     if (prices.isEmpty) {
-      return const Center(
-        child: Text('Veri bulunamadı'),
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.error_outline_rounded,
+              size: 64,
+              color: colorScheme.onSurface.withOpacity(0.3),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              'Veri bulunamadı',
+              style: TextStyle(
+                fontSize: 18,
+                color: colorScheme.onSurface.withOpacity(0.6),
+              ),
+            ),
+          ],
+        ),
       );
     }
 
@@ -314,137 +456,271 @@ class _HomeScreenState extends State<HomeScreen> {
       return priceA.compareTo(priceB);
     });
 
-    // Ortalama hesapla
-    double average = sortedPrices.map((p) => isGasoline ? p.gasPrice : p.dieselPrice).reduce((a, b) => a + b) / sortedPrices.length;
+    // İstatistikler
+    double average = sortedPrices
+        .map((p) => isGasoline ? p.gasPrice : p.dieselPrice)
+        .reduce((a, b) => a + b) / sortedPrices.length;
+    double minPrice = isGasoline 
+        ? sortedPrices.first.gasPrice 
+        : sortedPrices.first.dieselPrice;
+    double maxPrice = isGasoline 
+        ? sortedPrices.last.gasPrice 
+        : sortedPrices.last.dieselPrice;
 
     return Column(
       children: [
-        // Ortalama fiyat kartı
+        // İstatistik Kartları
         Container(
           margin: const EdgeInsets.all(16),
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.blue.shade400, Colors.blue.shade600],
-            ),
-            borderRadius: BorderRadius.circular(12),
-          ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Column(
-                children: [
-                  const Text(
-                    'Ortalama Fiyat',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+              Expanded(
+                child: _buildStatCard(
+                  title: 'Ortalama',
+                  value: '${average.toStringAsFixed(2)} ₺',
+                  icon: Icons.analytics_rounded,
+                  gradient: LinearGradient(
+                    colors: [
+                      colorScheme.primary.withOpacity(0.8),
+                      colorScheme.primary,
+                    ],
                   ),
-                  Text(
-                    '${average.toStringAsFixed(2)} ₺',
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
+                ),
               ),
-              Column(
-                children: [
-                  const Text(
-                    'En Ucuz',
-                    style: TextStyle(color: Colors.white70, fontSize: 14),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _buildStatCard(
+                  title: 'En Ucuz',
+                  value: '${minPrice.toStringAsFixed(2)} ₺',
+                  icon: Icons.trending_down_rounded,
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFF10B981), Color(0xFF059669)],
                   ),
-                  Text(
-                    '${(isGasoline ? sortedPrices.first.gasPrice : sortedPrices.first.dieselPrice).toStringAsFixed(2)} ₺',
-                    style: const TextStyle(
-                      color: Colors.greenAccent,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _buildStatCard(
+                  title: 'En Pahalı',
+                  value: '${maxPrice.toStringAsFixed(2)} ₺',
+                  icon: Icons.trending_up_rounded,
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFFEF4444), Color(0xFFDC2626)],
                   ),
-                ],
+                ),
               ),
             ],
           ),
         ),
 
-        // Firma listesi
+        // Firma Listesi
         Expanded(
           child: ListView.builder(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
             itemCount: sortedPrices.length,
             itemBuilder: (context, index) {
               FuelPrice price = sortedPrices[index];
               double currentPrice = isGasoline ? price.gasPrice : price.dieselPrice;
               bool isCheapest = index == 0;
+              bool isMostExpensive = index == sortedPrices.length - 1;
 
-              return Card(
-                elevation: isCheapest ? 6 : 2,
-                color: isCheapest ? Colors.green.shade50 : null,
-                margin: const EdgeInsets.only(bottom: 12),
-                child: ListTile(
-                  contentPadding: const EdgeInsets.all(12),
-                  leading: Container(
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(8),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.shade300,
-                          blurRadius: 4,
-                          offset: const Offset(0, 2),
-                        ),
-                      ],
+              return TweenAnimationBuilder<double>(
+                duration: Duration(milliseconds: 300 + (index * 50)),
+                tween: Tween(begin: 0.0, end: 1.0),
+                builder: (context, value, child) {
+                  return Transform.scale(
+                    scale: 0.95 + (value * 0.05),
+                    child: Opacity(
+                      opacity: value,
+                      child: child,
                     ),
-                    child: Image.network(
-                      price.logoUrl,
-                      errorBuilder: (context, error, stackTrace) {
-                        return Icon(Icons.local_gas_station, size: 32, color: Colors.grey.shade400);
+                  );
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(bottom: 12),
+                  decoration: BoxDecoration(
+                    gradient: isCheapest
+                        ? LinearGradient(
+                            colors: [
+                              const Color(0xFF10B981).withOpacity(0.1),
+                              const Color(0xFF059669).withOpacity(0.05),
+                            ],
+                          )
+                        : null,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: isCheapest
+                          ? const Color(0xFF10B981).withOpacity(0.3)
+                          : colorScheme.outline.withOpacity(0.1),
+                      width: 1.5,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: isCheapest
+                            ? const Color(0xFF10B981).withOpacity(0.1)
+                            : Colors.black.withOpacity(0.03),
+                        blurRadius: 10,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(20),
+                      onTap: () {
+                        // Detay sayfası eklenebilir
                       },
-                    ),
-                  ),
-                  title: Text(
-                    price.companyName,
-                    style: TextStyle(
-                      fontWeight: isCheapest ? FontWeight.bold : FontWeight.w600,
-                      fontSize: 16,
-                    ),
-                  ),
-                  subtitle: Text(
-                    'Güncelleme: ${price.lastUpdate}',
-                    style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
-                  ),
-                  trailing: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text(
-                        '${currentPrice.toStringAsFixed(2)} ₺',
-                        style: TextStyle(
-                          fontSize: isCheapest ? 24 : 20,
-                          fontWeight: FontWeight.bold,
-                          color: isCheapest ? Colors.green.shade700 : Colors.black87,
+                      child: Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Row(
+                          children: [
+                            // Logo
+                            Container(
+                              width: 64,
+                              height: 64,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.05),
+                                    blurRadius: 8,
+                                    offset: const Offset(0, 2),
+                                  ),
+                                ],
+                              ),
+                              padding: const EdgeInsets.all(12),
+                              child: Image.asset(
+                                price.logoUrl,
+                                fit: BoxFit.contain,
+                                errorBuilder: (context, error, stackTrace) {
+                                  return Icon(
+                                    Icons.local_gas_station_rounded,
+                                    size: 32,
+                                    color: colorScheme.primary.withOpacity(0.5),
+                                  );
+                                },
+                              ),
+                            ),
+                            const SizedBox(width: 16),
+                            
+                            // Firma Bilgileri
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        price.companyName,
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: colorScheme.onSurface,
+                                        ),
+                                      ),
+                                      if (isCheapest) ...[
+                                        const SizedBox(width: 8),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(
+                                            horizontal: 8,
+                                            vertical: 4,
+                                          ),
+                                          decoration: BoxDecoration(
+                                            gradient: const LinearGradient(
+                                              colors: [
+                                                Color(0xFF10B981),
+                                                Color(0xFF059669),
+                                              ],
+                                            ),
+                                            borderRadius: BorderRadius.circular(8),
+                                          ),
+                                          child: const Text(
+                                            '★ EN UCUZ',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.bold,
+                                              letterSpacing: 0.5,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ],
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.access_time_rounded,
+                                        size: 14,
+                                        color: colorScheme.onSurface.withOpacity(0.5),
+                                      ),
+                                      const SizedBox(width: 4),
+                                      Text(
+                                        price.lastUpdate,
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: colorScheme.onSurface.withOpacity(0.6),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            
+                            // Fiyat
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text(
+                                  '${currentPrice.toStringAsFixed(2)} ₺',
+                                  style: TextStyle(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: isCheapest
+                                        ? const Color(0xFF059669)
+                                        : isMostExpensive
+                                            ? const Color(0xFFDC2626)
+                                            : colorScheme.onSurface,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 2,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: (isCheapest
+                                            ? const Color(0xFF10B981)
+                                            : isMostExpensive
+                                                ? const Color(0xFFEF4444)
+                                                : colorScheme.primary)
+                                        .withOpacity(0.1),
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: Text(
+                                    '${((currentPrice - minPrice) / minPrice * 100).toStringAsFixed(1)}%',
+                                    style: TextStyle(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w600,
+                                      color: isCheapest
+                                          ? const Color(0xFF059669)
+                                          : isMostExpensive
+                                              ? const Color(0xFFDC2626)
+                                              : colorScheme.primary,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
-                      if (isCheapest)
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                          decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: const Text(
-                            'EN UCUZ',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                    ],
+                    ),
                   ),
                 ),
               );
@@ -453,6 +729,80 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ],
     );
+  }
+
+  Widget _buildStatCard({
+    required String title,
+    required String value,
+    required IconData icon,
+    required Gradient gradient,
+  }) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        gradient: gradient,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          Icon(icon, color: Colors.white, size: 24),
+          const SizedBox(height: 8),
+          Text(
+            title,
+            style: const TextStyle(
+              color: Colors.white70,
+              fontSize: 11,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            value,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// ============================================================================
+// STICKY TAB BAR DELEGATE
+// ============================================================================
+
+class _StickyTabBarDelegate extends SliverPersistentHeaderDelegate {
+  final TabBar tabBar;
+
+  _StickyTabBarDelegate(this.tabBar);
+
+  @override
+  double get minExtent => tabBar.preferredSize.height;
+
+  @override
+  double get maxExtent => tabBar.preferredSize.height;
+
+  @override
+  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
+    return Container(
+      color: Theme.of(context).scaffoldBackgroundColor,
+      child: tabBar,
+    );
+  }
+
+  @override
+  bool shouldRebuild(_StickyTabBarDelegate oldDelegate) {
+    return tabBar != oldDelegate.tabBar;
   }
 }
 
@@ -476,60 +826,250 @@ class CitySelectionDialog extends StatefulWidget {
 
 class _CitySelectionDialogState extends State<CitySelectionDialog> {
   String searchQuery = '';
+  late TextEditingController _searchController;
+
+  @override
+  void initState() {
+    super.initState();
+    _searchController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    
     List<String> filteredCities = widget.cities
         .where((city) => city.toLowerCase().contains(searchQuery.toLowerCase()))
         .toList();
 
-    return AlertDialog(
-      title: const Text('Şehir Seçin'),
-      content: SizedBox(
-        width: double.maxFinite,
+    return Dialog(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(28),
+      ),
+      child: Container(
+        constraints: const BoxConstraints(maxHeight: 600, maxWidth: 400),
         child: Column(
-          mainAxisSize: MainAxisSize.min,
           children: [
-            TextField(
-              decoration: const InputDecoration(
-                hintText: 'Şehir ara...',
-                prefixIcon: Icon(Icons.search),
-                border: OutlineInputBorder(),
+            // Header
+            Container(
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    colorScheme.primary,
+                    colorScheme.primary.withOpacity(0.8),
+                  ],
+                ),
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(28),
+                  topRight: Radius.circular(28),
+                ),
               ),
-              onChanged: (value) {
-                setState(() => searchQuery = value);
-              },
+              child: Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: const Icon(
+                      Icons.location_city_rounded,
+                      color: Colors.white,
+                      size: 24,
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  const Expanded(
+                    child: Text(
+                      'Şehir Seçin',
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.close_rounded, color: Colors.white),
+                    onPressed: () => Navigator.pop(context),
+                  ),
+                ],
+              ),
             ),
-            const SizedBox(height: 16),
-            Expanded(
-              child: ListView.builder(
-                shrinkWrap: true,
-                itemCount: filteredCities.length,
-                itemBuilder: (context, index) {
-                  String city = filteredCities[index];
-                  bool isSelected = city == widget.selectedCity;
-                  
-                  return ListTile(
-                    title: Text(city),
-                    selected: isSelected,
-                    selectedTileColor: Colors.blue.shade50,
-                    leading: isSelected
-                        ? const Icon(Icons.check_circle, color: Colors.blue)
-                        : const Icon(Icons.location_city),
-                    onTap: () => Navigator.pop(context, city),
-                  );
+
+            // Search Bar
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: TextField(
+                controller: _searchController,
+                autofocus: true,
+                decoration: InputDecoration(
+                  hintText: 'Şehir ara...',
+                  prefixIcon: Icon(Icons.search_rounded, color: colorScheme.primary),
+                  suffixIcon: searchQuery.isNotEmpty
+                      ? IconButton(
+                          icon: const Icon(Icons.clear_rounded),
+                          onPressed: () {
+                            _searchController.clear();
+                            setState(() => searchQuery = '');
+                          },
+                        )
+                      : null,
+                  filled: true,
+                  fillColor: colorScheme.surface,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(16),
+                    borderSide: BorderSide(color: colorScheme.outline),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(16),
+                    borderSide: BorderSide(
+                      color: colorScheme.outline.withOpacity(0.3),
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(16),
+                    borderSide: BorderSide(color: colorScheme.primary, width: 2),
+                  ),
+                ),
+                onChanged: (value) {
+                  setState(() => searchQuery = value);
                 },
               ),
+            ),
+
+            // Cities List
+            Expanded(
+              child: filteredCities.isEmpty
+                  ? Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.search_off_rounded,
+                            size: 64,
+                            color: colorScheme.onSurface.withOpacity(0.3),
+                          ),
+                          const SizedBox(height: 16),
+                          Text(
+                            'Şehir bulunamadı',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: colorScheme.onSurface.withOpacity(0.6),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  : ListView.builder(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      itemCount: filteredCities.length,
+                      itemBuilder: (context, index) {
+                        String city = filteredCities[index];
+                        bool isSelected = city == widget.selectedCity;
+
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 8,
+                            vertical: 4,
+                          ),
+                          child: Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              borderRadius: BorderRadius.circular(16),
+                              onTap: () => Navigator.pop(context, city),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 16,
+                                  vertical: 12,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: isSelected
+                                      ? colorScheme.primary.withOpacity(0.1)
+                                      : Colors.transparent,
+                                  borderRadius: BorderRadius.circular(16),
+                                  border: Border.all(
+                                    color: isSelected
+                                        ? colorScheme.primary.withOpacity(0.3)
+                                        : Colors.transparent,
+                                    width: 1.5,
+                                  ),
+                                ),
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(8),
+                                      decoration: BoxDecoration(
+                                        color: isSelected
+                                            ? colorScheme.primary
+                                            : colorScheme.surface,
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Icon(
+                                        isSelected
+                                            ? Icons.check_circle_rounded
+                                            : Icons.location_on_rounded,
+                                        color: isSelected
+                                            ? Colors.white
+                                            : colorScheme.primary,
+                                        size: 20,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 16),
+                                    Expanded(
+                                      child: Text(
+                                        city,
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: isSelected
+                                              ? FontWeight.bold
+                                              : FontWeight.w500,
+                                          color: isSelected
+                                              ? colorScheme.primary
+                                              : colorScheme.onSurface,
+                                        ),
+                                      ),
+                                    ),
+                                    if (isSelected)
+                                      Container(
+                                        padding: const EdgeInsets.symmetric(
+                                          horizontal: 8,
+                                          vertical: 4,
+                                        ),
+                                        decoration: BoxDecoration(
+                                          color: colorScheme.primary,
+                                          borderRadius: BorderRadius.circular(8),
+                                        ),
+                                        child: const Text(
+                                          'SEÇİLİ',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
             ),
           ],
         ),
       ),
-      actions: [
-        TextButton(
-          onPressed: () => Navigator.pop(context),
-          child: const Text('İptal'),
-        ),
-      ],
     );
   }
 }
