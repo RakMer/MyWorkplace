@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 
 void main() {
@@ -221,7 +222,27 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
+    _loadSavedCity();
+  }
+
+  Future<void> _loadSavedCity() async {
+    // Kaydedilmiş şehri yükle
+    final prefs = await SharedPreferences.getInstance();
+    final savedCity = prefs.getString('selected_city');
+    
+    if (savedCity != null && savedCity.isNotEmpty) {
+      setState(() {
+        selectedCity = savedCity;
+      });
+    }
+    
     _loadData();
+  }
+
+  Future<void> _saveCity(String city) async {
+    // Şehri kaydet
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('selected_city', city);
   }
 
   Future<void> _loadData() async {
@@ -248,9 +269,30 @@ class _HomeScreenState extends State<HomeScreen> {
         isLoading = true;
       });
       
+      // Yeni şehri kaydet
+      await _saveCity(newCity);
+      
       fuelPrices = await FuelDataService.loadFuelPrices(selectedCity);
       
       setState(() => isLoading = false);
+      
+      // Kullanıcıya bilgi ver
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Row(
+              children: [
+                const Icon(Icons.check_circle, color: Colors.white),
+                const SizedBox(width: 8),
+                Text('$newCity şehri kaydedildi'),
+              ],
+            ),
+            backgroundColor: Colors.green,
+            duration: const Duration(seconds: 2),
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+      }
     }
   }
 
