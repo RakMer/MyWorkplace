@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
+import 'dart:io';
 
 void main() {
   runApp(const AkaryakitApp());
@@ -218,11 +219,29 @@ class _HomeScreenState extends State<HomeScreen> {
   List<String> availableCities = [];
   String selectedCity = 'İSTANBUL';
   bool isLoading = true;
+  bool hasInternet = true;
 
   @override
   void initState() {
     super.initState();
-    _loadSavedCity();
+    _checkInternetAndLoad();
+  }
+
+  Future<void> _checkInternetAndLoad() async {
+    await _checkInternetConnection();
+    if (hasInternet) {
+      await _loadSavedCity();
+    } else {
+      setState(() => isLoading = false);
+    }
+  }
+
+  Future<void> _checkInternetConnection() async {
+    // Asset dosyaları local olduğu için her zaman erişilebilir
+    // Eğer ilerleye API'den veri çekilecekse bu method güncellenebilir
+    setState(() {
+      hasInternet = true;
+    });
   }
 
   Future<void> _loadSavedCity() async {
@@ -248,8 +267,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _loadData() async {
     setState(() => isLoading = true);
     
-    availableCities = await FuelDataService.loadAvailableCities();
-    fuelPrices = await FuelDataService.loadFuelPrices(selectedCity);
+    await _checkInternetConnection();
+    
+    if (hasInternet) {
+      availableCities = await FuelDataService.loadAvailableCities();
+      fuelPrices = await FuelDataService.loadFuelPrices(selectedCity);
+    }
     
     setState(() => isLoading = false);
   }
@@ -433,30 +456,32 @@ class _HomeScreenState extends State<HomeScreen> {
             
             // Content
             SliverFillRemaining(
-              child: isLoading
-                  ? Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CircularProgressIndicator(
-                            color: colorScheme.primary,
+              child: !hasInternet
+                  ? _buildNoInternetWidget()
+                  : isLoading
+                      ? Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircularProgressIndicator(
+                                color: colorScheme.primary,
+                              ),
+                              const SizedBox(height: 16),
+                              Text(
+                                'Fiyatlar yükleniyor...',
+                                style: TextStyle(
+                                  color: colorScheme.onSurface.withOpacity(0.6),
+                                ),
+                              ),
+                            ],
                           ),
-                          const SizedBox(height: 16),
-                          Text(
-                            'Fiyatlar yükleniyor...',
-                            style: TextStyle(
-                              color: colorScheme.onSurface.withOpacity(0.6),
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
-                  : TabBarView(
-                      children: [
-                        _buildFuelList(fuelPrices, isGasoline: true),
-                        _buildFuelList(fuelPrices, isGasoline: false),
-                      ],
-                    ),
+                        )
+                      : TabBarView(
+                          children: [
+                            _buildFuelList(fuelPrices, isGasoline: true),
+                            _buildFuelList(fuelPrices, isGasoline: false),
+                          ],
+                        ),
             ),
           ],
         ),
@@ -814,6 +839,71 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildNoInternetWidget() {
+    final colorScheme = Theme.of(context).colorScheme;
+    
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(32.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                color: colorScheme.errorContainer.withOpacity(0.3),
+                shape: BoxShape.circle,
+              ),
+              child: Icon(
+                Icons.wifi_off_rounded,
+                size: 80,
+                color: colorScheme.error,
+              ),
+            ),
+            const SizedBox(height: 24),
+            Text(
+              'İnternet Bağlantısı Yok',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: colorScheme.onSurface,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Akaryakıt fiyatlarını görüntülemek için lütfen internet bağlantınızı kontrol edin.',
+              style: TextStyle(
+                fontSize: 16,
+                color: colorScheme.onSurface.withOpacity(0.6),
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 32),
+            FilledButton.icon(
+              onPressed: () async {
+                await _checkInternetAndLoad();
+              },
+              icon: const Icon(Icons.refresh_rounded),
+              label: const Text('Tekrar Dene'),
+              style: FilledButton.styleFrom(
+                backgroundColor: colorScheme.primary,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 32,
+                  vertical: 16,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
